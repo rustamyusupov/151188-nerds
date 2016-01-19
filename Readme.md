@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Rustam Yusupov](https://htmlacademy.ru/profile/id151188).
-* Наставник: `Неизвестно`.
+* Наставник: `Sergey Popov`.
 
 ---
 
