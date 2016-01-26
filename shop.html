@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Нёрдс: магазин</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="container">
+        <div class="main-logo">
+          <a href="index.html">
+            <img src="https://placehold.it/150x60" width="150" height="60" alt="Логотип Нёрдс">
+          </a>
+        </div>
+        <nav class="main-navigation">
+          <ul>
+            <li>
+              <a href="#">Студия</a>
+            </li>
+            <li>
+              <a href="#">Клиенты</a>
+            </li>
+            <li class="current">Магазин</li>
+            <li>
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="user-block">
+          <a class="cart" href="#">Корзина</a>
+        </div>
+        <h1>Добро пожаловать в магазин готовых макетов</h1>
+      </div>
+    </header>
+    <main class="container">
+      <div class="goods">
+        <form action="#" method="post">
+          <aside class="goods-filters">
+            <div class="filter-worth">
+              <b class="filter-name">Стоимость:</b>
+              <div class="price">
+                <!-- TODO: Найти как размечать двойной ползунок -->
+                <input type="range" id="price" name="price" min="0" max="15000" step="1">
+                <label for="field-from">От</label>
+                <input id="field-from" type="text" name="from" value="0">
+                <label for="field-to">До</label>
+                <input id="field-to" type="text" name="to" value="15000">
+              </div>
+            </div>
+            <div class="filter-grid">
+              <b class="filter-name">Сетка:<b>
+              <ul class="grid">
+                <li>
+                  <input id="grid-adaptive" type="radio" name="grids" checked>
+                  <label for="grid-adaptive">Адаптивная</label>
+                </li>
+                <li>
+                  <input id="grid-fixed" type="radio" name="grids">
+                  <label for="grid-fixed">Фиксированная</label>
+                </li>
+                <li>
+                  <input id="grid-rubber" type="radio" name="grids">
+                  <label for="grid-rubber">Резиновая</label>
+                </li>
+              </ul>
+            </div>
+            <div class="filter-features">
+              <b class="filter-name">Особенности:</b>
+              <ul class="feature">
+                <li>
+                  <input id="feature-slider" type="checkbox" name="features" checked>
+                  <label for="feature-slider">Слайдер</label>
+                </li>
+                <li>
+                  <input id="feature-privilege" type="checkbox" name="features">
+                  <label for="feature-privilege">Блок преимуществ</label>
+                </li>
+                <li>
+                  <input id="feature-news" type="checkbox" name="features" checked>
+                  <label for="feature-news">Новости</label>
+                </li>
+                <li>
+                  <input id="feature-gallery" type="checkbox" name="features">
+                  <label for="feature-gallery">Галерея</label>
+                </li>
+                <li>
+                  <input id="feature-cart" type="checkbox" name="features">
+                  <label for="feature-cart">Корзина</label>
+                </li>
+              </ul>
+            </div>
+            <button class="btn" type="submit">Показать</button>
+          </aside>
+        </form>
+        <div class="goods-pages">
+          <div class="pages-filter">
+            <p>Сортировать:</p>
+            <ul class="sort">
+              <li>
+                <a href="#">По цене</a>
+              </li>
+              <li>
+                <a href="#">По типу</a>
+              </li>
+              <li>
+                <a href="#">По функционалу</a>
+              </li>
+            </ul>
+            <div class="ascdesc">
+            </div>
+          </div>
+          <div class="goods-items">
+            <div class="goods-item">
+              <div class="item-header">
+              </div>
+              <div class="item-content">
+                <img src="https://placehold.it/240x240" width="240" height="240" alt="Миниатюра Aviator">
+                <div class="content-desc">
+                  <p class="name">Aviator</p>
+                  <p class="desc"></p>
+                  <a class="btn" href="#"></a>
+                </div>
+              </div>
+            </div>
+            <div class="goods-item">
+              <div class="item-header">
+              </div>
+              <div class="item-content">
+                <img src="https://placehold.it/240x240" width="240" height="240" alt="Миниатюра Sunset">
+                <div class="content-desc">
+                  <p class="name">Sunset</p>
+                  <p class="desc"></p>
+                  <a class="btn" href="#"></a>
+                </div>
+              </div>
+            </div>
+            <div class="goods-item">
+              <div class="item-header">
+              </div>
+              <div class="item-content">
+                <img src="https://placehold.it/240x240" width="240" height="240" alt="Миниатюра Forte">
+                <div class="content-desc">
+                  <p class="name">Forte</p>
+                  <p class="desc"></p>
+                  <a class="btn" href="#"></a>
+                </div>
+              </div>
+            </div>
+            <div class="goods-item">
+              <div class="item-header">
+              </div>
+              <div class="item-content">
+                <img src="https://placehold.it/240x240" width="240" height="240" alt="Миниатюра Marquee">
+                <div class="content-desc">
+                  <p class="name">Marquee</p>
+                  <p class="desc"></p>
+                  <a class="btn" href="#"></a>
+                </div>
+              </div>
+            </div>
+            <div class="goods-item">
+              <div class="item-header">
+              </div>
+              <div class="item-content">
+                <img src="https://placehold.it/240x240" width="240" height="240" alt="Миниатюра Avenue">
+                <div class="content-desc">
+                  <p class="name">Avenue</p>
+                  <p class="desc"></p>
+                  <a class="btn" href="#"></a>
+                </div>
+              </div>
+            </div>
+            <div class="goods-item">
+              <div class="item-header">
+              </div>
+              <div class="item-content">
+                <img src="https://placehold.it/240x240" width="240" height="240" alt="Миниатюра Dovetail">
+                <div class="content-desc">
+                  <p class="name">Dovetail</p>
+                  <p class="desc"></p>
+                  <a class="btn" href="#"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ul class="goods-paginator">
+            <li class="current">1</li>
+            <li>
+              <a href="#">2</a>
+            </li>
+            <li>
+              <a href="#">3</a>
+            </li>
+            <li>
+              <a class="next" href="#">Следующая</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-map">
+          <div class="map-contacts">
+            <p>N&euml;rds design studio</p>
+            <p>191186, Санкт-Петербург,<br>
+               ул. Б. Конюшенная, д. 19/8<br>
+               тел. +7 (812) 275-75-75</p>
+               <button class="btn">Напишите нам</button>
+          </div>
+          <div class="map-pointer">
+            <img src="https://placehold.it/190x190" width="190" height="190" alt="Указатель студии на карте">
+          </div>
+        </div>
+        <div class="footer-social">
+          <a class="social-btn social-vk" href="#">Вконтакте</a>
+          <a class="social-btn social-fb" href="#">Фейсбук</a>
+          <a class="social-btn social-ig" href="#">Инстаграм</a>
+        </div>
+        <div class="footer-sale">
+          <h2>Давайте дружить, это выгодно!</h2>
+          <p>Скидка 10% для друзей из социальных сетей.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
