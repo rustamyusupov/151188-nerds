@@ -1,0 +1,17 @@
+body {
+  color: #000000;
+  font-family: "Roboto", "???", ???;
+  line-height: 22px;
+  font-size: 16px;
+  font-weight: medium;
+}
+
+h1 {
+  line-height: auto;
+  font-size: 40px;
+}
+
+h2 {
+  line-height: 36px;
+  font-size: 36§px;
+}
