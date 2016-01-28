@@ -1,6 +1,5 @@
 body {
   color: #000000;
-  /* TODO: В задании указано не подключать к странице нестандартный шрифт */
   font-family: "Tahoma", sans-serif; /*"Roboto",*/
   line-height: 22px;
   font-size: 16px;
