@@ -1,17 +1,162 @@
 body {
   color: #000000;
   font-family: "Tahoma", sans-serif; /*"Roboto",*/
-  line-height: 22px;
   font-size: 16px;
   font-weight: medium;
+  line-height: 22px;
 }
 
 h1 {
-  line-height: auto;
   font-size: 40px;
+  line-height: auto;
 }
 
 h2 {
-  line-height: 36px;
   font-size: 36§px;
+  line-height: 36px;
+}
+
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 10px;
+  /*width: 940px;*/
+}
+
+.main-logo {
+  float: left;
+  /*margin-right: 20px;
+  width: 140px;*/
+}
+
+.main-navigation {
+  float: left;
+  /*width: 620px;*/
+}
+
+.user-block {
+  float: right;
+  /*width: 140px;*/
+}
+
+.header-top {
+  /*margin-bottom: 60px;*/
+}
+
+.carousel-item {
+  float: left;
+  /*width: 400px;*/
+}
+
+.item-background {
+  float: right;
+  /*width: px;*/
+}
+
+.main-carousel {
+  /*margin-bottom: px;*/
+}
+
+.features-item {
+  float: left;
+  /*margin-right: 10px;
+  width: 240px;*/
+}
+
+.features-item:last-child {
+  /*margin-right: 0;*/
+}
+
+.features {
+  /*margin-bottom: px;*/
+}
+
+.description-left {
+  float: left;
+  /*margin-right: px;*/
+  /*width: px;*/
+}
+
+.description-right {
+  float: right;
+  /*width: px;*/
+}
+
+.description-top {
+  /*margin-bottom: px;*/
+}
+
+.description {
+  /*margin-bottom: px;*/
+}
+
+.gallery-item {
+  float: left;
+  /*margin-right: px;*/
+  /*width: px;*/
+}
+
+.gallery-item:last-child {
+  margin-right: 0;
+}
+
+.main-gallery {
+  /*margin-bottom: px;*/
+}
+
+.goods-filters {
+  float: left;
+  /*margin-bottom: px;*/
+  /*width: px;*/
+}
+
+.goods-pages {
+  float: right;
+  width: 800px;
+}
+
+.goods-items {
+  float: left;
+  /*margin-right: px;*/
+  /*width: px;*/
+}
+
+.goods {
+    /*margin-bottom: px;*/
+}
+
+
+.map-contacts {
+  float: left;
+  /*margin-right: px;*/
+  /*width: px;*/
+}
+
+.map-pointer {
+  float: right;
+  /*width: px;*/
+}
+
+.footer-map {
+  /*margin-bottom: px;*/
+}
+
+.footer-social {
+  float: left;
+  /*margin-right: px;*/
+  /*width: px;*/
+}
+
+.footer-sale {
+  float: right;
+  /*width: px;*/
+}
+
+.outline {
+  outline: 1px dashed blue;
 }
