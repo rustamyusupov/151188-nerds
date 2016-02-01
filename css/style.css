@@ -12,7 +12,7 @@ h1 {
 }
 
 h2 {
-  font-size: 36§px;
+  font-size: 36px;
   line-height: 36px;
 }
 
@@ -25,136 +25,149 @@ h2 {
 .container {
   margin: 0 auto;
   padding: 0 10px;
-  /*width: 940px;*/
+  width: 880px;
 }
 
 .main-logo {
   float: left;
-  /*margin-right: 20px;
-  width: 140px;*/
+  margin-right: 20px;
+  width: 140px;
 }
 
 .main-navigation {
   float: left;
-  /*width: 620px;*/
+  width: 560px;
 }
 
 .user-block {
   float: right;
-  /*width: 140px;*/
+  width: 100px;
 }
 
 .header-top {
-  /*margin-bottom: 60px;*/
+  margin-bottom: 60px;
 }
 
-.carousel-item {
+.header-title {
+  margin: 0 auto;
+  margin-bottom: 80px;
+  width: 700px;
+}
+
+.item-content {
   float: left;
-  /*width: 400px;*/
+  margin-right: 70px;
+  width: 470px;
 }
 
 .item-background {
   float: right;
-  /*width: px;*/
+  width: 340px;
 }
 
 .main-carousel {
-  /*margin-bottom: px;*/
+  margin-bottom: 80px;
+}
+
+.main-header {
+  margin-bottom: 80px;
 }
 
 .features-item {
   float: left;
-  /*margin-right: 10px;
-  width: 240px;*/
+  margin-right: 80px;
+  width: 240px;
 }
 
 .features-item:last-child {
-  /*margin-right: 0;*/
+  margin-right: 0;
 }
 
 .features {
-  /*margin-bottom: px;*/
+  margin-bottom: 80px;
 }
 
 .description-left {
   float: left;
-  /*margin-right: px;*/
-  /*width: px;*/
+  margin-right: 20px;
+  width: 620px;
 }
 
 .description-right {
   float: right;
-  /*width: px;*/
+  width: 240px;
 }
 
 .description-top {
-  /*margin-bottom: px;*/
+  margin-bottom: 50px;
 }
 
 .description {
-  /*margin-bottom: px;*/
+  margin-bottom: 80px;
+  margin-top: 80px;
 }
 
 .gallery-item {
   float: left;
-  /*margin-right: px;*/
-  /*width: px;*/
+  margin-right: 110px;
+  width: 220px;
 }
 
 .gallery-item:last-child {
   margin-right: 0;
 }
 
-.main-gallery {
-  /*margin-bottom: px;*/
-}
-
 .goods-filters {
   float: left;
-  /*margin-bottom: px;*/
-  /*width: px;*/
+  width: 240px;
 }
 
 .goods-pages {
   float: right;
-  width: 800px;
+  width: 560px;
 }
 
-.goods-items {
+.goods-item {
   float: left;
-  /*margin-right: px;*/
-  /*width: px;*/
+  margin-bottom: 80px;
+  margin-right: 80px;
+  width: 240px;
+}
+
+.goods-item:nth-child(2n) {
+  margin-right: 0;
 }
 
 .goods {
-    /*margin-bottom: px;*/
+    margin-bottom: 80px;
 }
 
+.main-footer {
+  margin-top: 90px;
+}
 
 .map-contacts {
   float: left;
-  /*margin-right: px;*/
-  /*width: px;*/
+  width: 250px;
 }
 
 .map-pointer {
   float: right;
-  /*width: px;*/
+  width: 231px;
 }
 
 .footer-map {
-  /*margin-bottom: px;*/
+  margin-bottom: 70;
 }
 
 .footer-social {
   float: left;
-  /*margin-right: px;*/
-  /*width: px;*/
+  width: 240px;
 }
 
 .footer-sale {
   float: right;
-  /*width: px;*/
+  width: 550px;
 }
 
 .outline {

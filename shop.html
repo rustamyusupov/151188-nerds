@@ -6,9 +6,10 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="main-header">
-      <div class="container clearfix outline">
-        <div class="header-top clearfix outline">
+    <!-- TODO: Без этой распорки не получется отступ снизу сделать, корректно ли ее использование? -->
+    <header class="main-header clearfix">
+      <div class="container">
+        <div class="header-top clearfix">
           <div class="main-logo">
             <a href="index.html">
               <img src="https://placehold.it/139x56" width="139" height="56" alt="Логотип Нёрдс">
@@ -32,13 +33,15 @@
             <a class="cart" href="#">Корзина</a>
           </div>
         </div>
-        <h1>Добро пожаловать в магазин готовых макетов</h1>
+        <div class="header-title">
+          <h1>Добро пожаловать в магазин готовых макетов</h1>
+        </div>
       </div>
     </header>
     <main class="container">
-      <div class="goods clearfix outline">
+      <div class="goods clearfix">
         <form action="#" method="post">
-          <aside class="goods-filters outline">
+          <aside class="goods-filters">
             <div class="filter-worth">
               <b class="filter-name">Стоимость:</b>
               <div class="price">
@@ -90,7 +93,7 @@
             <button class="btn" type="submit">Показать</button>
           </aside>
         </form>
-        <div class="goods-pages clearfix outline">
+        <div class="goods-pages clearfix">
           <div class="pages-filter">
             <p>Сортировать:</p>
             <ul class="sort">
@@ -107,7 +110,7 @@
             <div class="ascdesc">
             </div>
           </div>
-          <div class="goods-items clearfix outline">
+          <div class="goods-items clearfix">
             <div class="goods-item">
               <ul class="item-header">
                 <li></li>
@@ -199,7 +202,7 @@
               </div>
             </div>
           </div>
-          <ul class="goods-paginator outline">
+          <ul class="goods-paginator">
             <li class="current">1</li>
             <li>
               <a href="#">2</a>
@@ -215,25 +218,25 @@
       </div>
     </main>
     <footer class="main-footer">
-      <div class="footer-map clearfix outline">
-        <div class="map-contacts outline">
+      <div class="footer-map clearfix">
+        <div class="map-contacts">
           <p>N&euml;rds design studio</p>
           <p>191186, Санкт-Петербург,<br>
              ул. Б. Конюшенная, д. 19/8<br>
              тел. +7 (812) 275-75-75</p>
              <button class="btn">Напишите нам</button>
         </div>
-        <div class="map-pointer outline">
+        <div class="map-pointer">
           <img src="https://placehold.it/231x190" width="231" height="190" alt="Указатель студии на карте">
         </div>
       </div>
       <div class="container clearfix">
-        <div class="footer-social outline">
+        <div class="footer-social">
           <a class="social-btn social-vk" href="#">Вконтакте</a>
           <a class="social-btn social-fb" href="#">Фейсбук</a>
           <a class="social-btn social-ig" href="#">Инстаграм</a>
         </div>
-        <div class="footer-sale outline">
+        <div class="footer-sale">
           <h2>Давайте дружить, это выгодно!</h2>
           <p>Скидка 10% для друзей из социальных сетей.</p>
         </div>
