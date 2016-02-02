@@ -107,10 +107,15 @@ h2 {
   margin-top: 80px;
 }
 
+.main-gallery {
+  font-size: 0;
+  /*text-align: center;*/
+}
+
 .gallery-item {
-  float: left;
-  margin-right: 110px;
-  width: 220px;
+  display: inline-block;
+  margin-right: 130px;
+  vertical-align: middle;
 }
 
 .gallery-item:last-child {
