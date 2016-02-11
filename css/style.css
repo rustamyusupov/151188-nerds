@@ -2,7 +2,7 @@ body {
   color: #000000;
   font-family: "Roboto", "Tahoma", sans-serif;
   font-size: 16px;
-  font-weight: medium;
+  font-weight: 500;
   line-height: 22px;
   min-width: 900px;
 }
@@ -17,6 +17,11 @@ h2 {
   line-height: 36px;
 }
 
+h3 {
+  font-size: 16px;
+  line-height: 22px;
+}
+
 .clearfix::after {
   clear: both;
   content: "";
@@ -27,6 +32,15 @@ h2 {
   margin: 0 auto;
   padding: 0 10px;
   width: 880px;
+}
+
+.main-header {
+  margin-bottom: 80px;
+}
+
+.header-top {
+  margin-bottom: 60px;
+  margin-top: 27px;
 }
 
 .main-logo {
@@ -42,7 +56,11 @@ h2 {
 
 .main-navigation {
   float: left;
-  width: 560px;
+  padding-left: 160px;
+  margin-top: 16px;
+  width: 460px;
+
+  outline: 1px dashed red;
 }
 
 .main-navigation ul {
@@ -64,7 +82,7 @@ h2 {
 .main-navigation a {
   color: #000000;
   display: block;
-  padding: 25px 20px;
+  padding: 10px 20px;
   text-decoration: none;
 }
 
@@ -72,16 +90,24 @@ h2 {
   background-color: #242424;
 }*/
 
-
-
-
 .user-block {
   float: right;
+  margin-top: 16px;
   width: 100px;
+
+  outline: 1px dashed red;
 }
 
-.header-top {
-  margin-bottom: 60px;
+.cart {
+  color: #000000;
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 30px;
+  padding: 10px 0;
+  padding-left: 35px;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .header-title {
@@ -101,11 +127,35 @@ h2 {
   width: 340px;
 }
 
+
+.btn {
+  background-color: #fb565a;
+  border: none;
+  /* TODO: как сделать закругления углов? */
+  border-radius: 5%;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Roboto", "Tahoma", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 18px;
+  margin-right: 16px;
+  outline: none;
+  padding: 8px 40px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
 .main-carousel {
   margin-bottom: 80px;
 }
 
-.main-header {
+
+
+.main-features {
   margin-bottom: 80px;
 }
 
@@ -119,8 +169,66 @@ h2 {
   margin-right: 0;
 }
 
-.main-features {
+.main-features-item img {
+  height: 124px;
+  margin-bottom: 25px;
+  width: 240px;
+}
+
+.main-features-item .features-name {
+  font-size: 18px;
+  line-height: 30px;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+}
+
+.main-features-item p {
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.main-features-item .features-green {
+  background-color: #00ca74;
+}
+
+.main-features-item .features-yellow {
+  background-color: #efc84a;
+}
+
+/* TODO: как нарисовать горизонтальную линию? */
+
+.main-description {
   margin-bottom: 80px;
+  margin-top: 80px;
+}
+
+.main-description-top {
+  margin-bottom: 20px; /* TODO: Почему здесь такой отступ? */
+}
+
+.main-description-top h2 {
+  margin-bottom: 20px;
+}
+
+.main-description-bottom h3 {
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+
+.main-description-bottom ul {
+  font-size: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-description-bottom li {
+  display: block;
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 25px;
+  margin-left: 40px;
+  vertical-align: top;
 }
 
 .main-description-left {
@@ -134,18 +242,12 @@ h2 {
   width: 240px;
 }
 
-.main-description-top {
-  margin-bottom: 50px;
-}
 
-.main-description {
-  margin-bottom: 80px;
-  margin-top: 80px;
-}
+
+
 
 .main-gallery {
   font-size: 0;
-  /*text-align: center;*/
 }
 
 .main-gallery-item {
@@ -177,7 +279,6 @@ h2 {
   font-size: 16px;
   margin-bottom: 80px;
   margin-right: 80px;
-  /* TODO: Нужен ли?*/
   vertical-align: top;
   width: 240px;
 }
@@ -194,12 +295,30 @@ h2 {
   margin-top: 90px;
 }
 
-.map-contacts {
+.main-footer .map-contacts {
   float: left;
-  width: 250px;
+  padding: 0 20px;
+  padding-bottom: 25px;
+  width: 210px;
+
+  margin-left: 40px;
+  outline: 1px dashed red;
 }
 
-.map-pointer {
+.map-contacts .contacts-title {
+  color: #000000;
+  font-size: 16px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.map-contacts p {
+  color: #666666;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.main-footer .map-pointer {
   float: right;
   width: 231px;
 }
