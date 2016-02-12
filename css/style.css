@@ -32,15 +32,18 @@ h3 {
   margin: 0 auto;
   padding: 0 10px;
   width: 880px;
+
+  outline: 1px dashed red;
 }
 
 .main-header {
+  background: #eeeeee;
   margin-bottom: 80px;
+  padding-top: 27px;
 }
 
 .header-top {
   margin-bottom: 60px;
-  margin-top: 27px;
 }
 
 .main-logo {
@@ -127,12 +130,10 @@ h3 {
   width: 340px;
 }
 
-
 .btn {
   background-color: #fb565a;
   border: none;
-  /* TODO: как сделать закругления углов? */
-  border-radius: 5%;
+  border-radius: 3%;
   color: #ffffff;
   cursor: pointer;
   display: inline-block;
@@ -142,7 +143,7 @@ h3 {
   line-height: 18px;
   margin-right: 16px;
   outline: none;
-  padding: 8px 40px;
+  padding: 12px 40px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -150,10 +151,101 @@ h3 {
 }
 
 .main-carousel {
+  margin: 0 auto;
   margin-bottom: 80px;
+  position: relative;
+  width: 880px;
 }
 
+.main-carousel-item {
+  background-position: 100% 10px;
+  background-repeat: no-repeat;
+  min-height: 310px;
 
+  outline: 1px dashed red;
+}
+
+.main-carousel input[type="radio"] {
+  display: none;
+}
+
+.main-carousel-slider {
+  bottom: 70px;
+  left: 50%;
+  margin-left: -100px;
+  position: absolute;
+  text-align: center;
+  width: 200px;
+}
+
+.main-carousel-slider label {
+  background: #ffffff;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+  height: 4px;
+  margin: 0 3px;
+  vertical-align: top;
+  width: 4px;
+}
+
+.item-content {
+  padding: 30px 0;
+  width: 480px;
+}
+
+.content-name {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 36px;
+}
+
+.item-content p {
+  color: #283136;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.item-content .btn {
+  margin-top: 25px;
+  padding: 12px 70px;
+}
+
+.main-carousel-item:nth-child(1) {
+  background-image: url("../img/index-carousel1.png");
+}
+
+.main-carousel-item:nth-child(2) {
+  background-image: url("../img/index-carousel2.png");
+}
+
+.main-carousel-item:nth-child(3) {
+  background-image: url("../img/index-carousel3.png");
+}
+
+.main-carousel-item {
+  display: none;
+}
+
+#btn-1:checked ~ .main-carousel-items .main-carousel-item:nth-child(1) {
+  display: block;
+}
+
+#btn-2:checked ~ .main-carousel-items .main-carousel-item:nth-child(2) {
+  display: block;
+}
+
+#btn-3:checked ~ .main-carousel-items .main-carousel-item:nth-child(3) {
+  display: block;
+}
+
+#btn-1:checked ~ .main-carousel-slider label[for="btn-1"],
+#btn-2:checked ~ .main-carousel-slider label[for="btn-2"],
+#btn-3:checked ~ .main-carousel-slider label[for="btn-3"] {
+  background: #c1c1c1;
+}
 
 .main-features {
   margin-bottom: 80px;
@@ -222,13 +314,28 @@ h3 {
   padding: 0;
 }
 
+
+
 .main-description-bottom li {
   display: block;
   font-size: 16px;
   line-height: 22px;
   margin-bottom: 25px;
-  margin-left: 40px;
+  margin-left: 37px;
+  position: relative;
   vertical-align: top;
+
+  outline: 1px dashed red;
+}
+
+.main-description-bottom li::before {
+  content: "";
+  border: 1px solid red;
+  display: block;
+  left: -36px;
+  position: absolute;
+  top: 50%;
+  width: 25px;
 }
 
 .main-description-left {
@@ -241,10 +348,6 @@ h3 {
   float: right;
   width: 240px;
 }
-
-
-
-
 
 .main-gallery {
   font-size: 0;
@@ -293,15 +396,32 @@ h3 {
 
 .main-footer {
   margin-top: 90px;
+  margin-bottom: 75px;
+
 }
 
-.main-footer .map-contacts {
+.footer-map {
+  margin-bottom: 75px;
+
+  background-image: url("../img/map.jpg");
+  height: 416px;
+  position: relative;
+
+  outline: 1px dashed red;
+}
+
+/* TODO: как правильно было сделать контакты? */
+.footer-map .map-contacts {
+  background-color: #ffffff;
   float: left;
-  padding: 0 20px;
   padding-bottom: 25px;
+  padding-left: 20px;
+  padding-right: 25px;
+  padding-top: 5px;
   width: 210px;
 
-  margin-left: 40px;
+  margin-left: 160px;
+  margin-top: 90px;
   outline: 1px dashed red;
 }
 
@@ -309,6 +429,7 @@ h3 {
   color: #000000;
   font-size: 16px;
   line-height: 30px;
+  margin-bottom: 15px;
   text-transform: uppercase;
 }
 
@@ -318,21 +439,95 @@ h3 {
   line-height: 20px;
 }
 
-.main-footer .map-pointer {
-  float: right;
-  width: 231px;
+.map-contacts .contacts-phone {
+  display: block;
+  margin-bottom: 25px;
+  margin-top: 20px;
 }
 
-.footer-map {
-  margin-bottom: 70;
+.map-contacts .btn {
+  margin-left: 15px;
+}
+
+.footer-map .map-pointer {
+  float: right;
+  width: 231px;
+
+  position: absolute;
+  bottom: 110px;
+  left: 840px;
 }
 
 .footer-social {
   float: left;
+  font-size: 0;
   width: 240px;
+
+  outline: 1px dashed red;
+}
+
+.social-btn {
+  /*background: #000000 url("../img/sprite.png") no-repeat center;*/
+  background-color: #e1e1e1;
+  border-radius: 50%;
+  display: inline-block;
+  height: 62px;
+  margin-right: 27px;
+  text-decoration: none;
+  vertical-align: top;
+  width: 62px;
+}
+
+.social-btn:last-child {
+  margin-right: 0;
 }
 
 .footer-sale {
   float: right;
   width: 550px;
+
+  outline: 1px dashed red;
 }
+
+.footer-sale h2 {
+  margin: 0;
+  margin-bottom: 10px;
+
+  outline: 1px dashed red;
+}
+
+.footer-sale p {
+  margin: 0;
+
+  outline: 1px dashed red;
+}
+
+/*.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-cart {
+    width: 15px;
+    height: 15px;
+    background-position: -10px -10px;
+}
+
+.sprite-fb {
+    width: 12px;
+    height: 22px;
+    background-position: -10px -45px;
+}
+
+.sprite-ig {
+    width: 21px;
+    height: 21px;
+    background-position: -10px -87px;
+}
+
+.sprite-vk {
+    width: 26px;
+    height: 15px;
+    background-position: -10px -128px;
+}*/

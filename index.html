@@ -35,39 +35,36 @@
           </div>
         </div>
         <div class="main-carousel">
-          <div class="main-carousel-items">
-            <div class="main-carousel-item clearfix">
-              <div class="item-content">
-                <b class="content-name">Долго, дорого, скрупулезно.</b>
-                <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
-                <button class="btn">Узнать больше</button>
-              </div>
-              <div class="item-background">
-              </div>
-            </div>
-            <div class="main-carousel-item clearfix">
-              <div class="item-content">
-                <b class="content-name">Любите ли вы математику, как любим ее мы?</b>
-                <p>Нашим дизайнерам мы удаляем нейроны, ответственные за креатив, чтобы дать им возможность все просчитать.</p>
-                <button class="btn">Узнать больше</button>
-              </div>
-              <div class="item-background">
-              </div>
-            </div>
-            <div class="main-carousel-item clearfix">
-              <div class="item-content">
-                <b class="content-name">Только наркотики, только хардкор!</b>
-                <p>Все дизайнерские решения в нашей компании принимаются только под воздействием качественных галлюциногенов</p>
-                <button class="btn">Узнать больше</button>
-              </div>
-              <div class="item-background">
-              </div>
-            </div>
-          </div>
+          <input type="radio" id="btn-1" name="slider" checked>
+          <input type="radio" id="btn-2" name="slider">
+          <input type="radio" id="btn-3" name="slider">
           <div class="main-carousel-slider">
-            <input type="radio" name="slider" checked>
-            <input type="radio" name="slider">
-            <input type="radio" name="slider">
+            <label for="btn-1"></label>
+            <label for="btn-2"></label>
+            <label for="btn-3"></label>
+          </div>
+          <div class="main-carousel-items">
+            <div class="main-carousel-item">
+              <div class="item-content">
+                <b class="content-name">Долго, дорого,<br>скрупулезно.</b>
+                <p>Математически выверенный дизайн<br>для вашего сайта или мобильного приложения.</p>
+                <button class="btn">Узнать больше</button>
+              </div>
+            </div>
+            <div class="main-carousel-item">
+              <div class="item-content">
+                <b class="content-name">Любите ли вы математику,<br>как любим ее мы?</b>
+                <p>Нашим дизайнерам мы удаляем нейроны, ответственные<br>за креатив, чтобы дать им возможность все просчитать.</p>
+                <button class="btn">Узнать больше</button>
+              </div>
+            </div>
+            <div class="main-carousel-item">
+              <div class="item-content">
+                <b class="content-name">Только наркотики,<br>только хардкор!</b>
+                <p>Все дизайнерские решения в нашей компании принимаются<br>только под воздействием качественных галлюциногенов</p>
+                <button class="btn">Узнать больше</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -83,7 +80,7 @@
         <div class="main-features-item">
           <img src="img/index-features2.png" width="240" height="124" alt="Приложения">
           <b class="features-name">Приложения</b>
-          <p>Покорите топ-10 приложений в AppStore и Google Play!</p>
+          <p>Покорите топ-10 приложений<br>в AppStore и Google Play!</p>
           <a class="btn features-green" href="#">Заказать</a>
         </div>
         <div class="main-features-item">
@@ -106,7 +103,7 @@
         <div class="main-description-bottom clearfix">
           <div class="main-description-left">
             <h3>Выполняем заказы на разработку:</h3>
-            <ul class="description-develop">
+            <ul class="description-develop"> <!-- TODO: Нужен ли этот класс -->
               <li>Веб-сайтов любой сложности</li>
               <li>Мобильных приложений для iOS и Android</li>
               <li>Слайдшоу и видео для корпоративных презентаций</li>
@@ -114,7 +111,7 @@
           </div>
           <div class="main-description-right">
             <h3>Как мы работаем:</h3>
-            <ul class="description-conditions">
+            <ul class="description-conditions"> <!-- TODO: Нужен ли этот класс -->
               <li>С самоотдачей 146%</li>
               <li>Соблюдая сроки на 100%</li>
               <li>По предоплате 50%</li>
@@ -140,11 +137,11 @@
           <p class="contacts-title">N&euml;rds design studio</p>
           <p>191186, Санкт-Петербург,<br>
              ул. Б. Конюшенная, д. 19/8<br>
-             тел. +7 (812) 275-75-75</p>
+             <span class="contacts-phone">тел. +7 (812) 275-75-75</span></p>
              <button class="btn">Напишите нам</button>
         </div>
         <div class="map-pointer">
-          <img src="https://placehold.it/231x190" width="231" height="190" alt="Указатель студии на карте">
+          <img src="img/map-pointer.png" width="231" height="190" alt="Указатель студии на карте">
         </div>
       </div>
       <div class="container clearfix">
