@@ -9,7 +9,7 @@ body {
 
 h1 {
   font-size: 40px;
-  line-height: auto;
+  line-height: 52px;
 }
 
 h2 {
@@ -85,6 +85,25 @@ h3 {
   text-decoration: none;
 }
 
+.main-navigation-current {
+  position: relative;
+}
+
+.main-navigation-current::after {
+  background-color: #fb565a;
+  bottom: 12px;
+  content: "";
+  height: 2px;
+  left: 20px;
+  position: absolute;
+  right: 20px;
+}
+
+.main-navigation-current span {
+  display: block;
+  padding: 10px 20px;
+}
+
 .user-block {
   float: right;
   margin-top: 16px;
@@ -135,9 +154,14 @@ h3 {
 }
 
 .header-title {
+  font-weight: 500;
   margin: 0 auto;
   margin-bottom: 80px;
+  text-align: center;
+  text-transform: uppercase;
   width: 700px;
+
+  outline: 1px dashed red;
 }
 
 .item-content {
@@ -461,18 +485,288 @@ h3 {
   opacity: 1;
 }
 
+.goods {
+  margin-bottom: 80px;
+}
+
 .goods-filters {
   float: left;
   width: 240px;
+
+  outline: 1px dashed red;
+}
+
+.filter-worth {
+  margin-bottom: 45px;
+  width: 240px;
+
+  outline: 1px dashed red;
+}
+
+.filter-name {
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.range-controls {
+  background: #f1f1f1;
+  border-radius: 5px;
+  height: 41px;
+  margin-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 39px;
+  position: relative;
+}
+
+.range-controls .scale {
+  background: #d7dcde;
+  height: 2px;
+}
+
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+  background: #00ca74;
+}
+
+.range-controls .toggle {
+  background: #ababab;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  cursor: pointer;
+  height: 4px;
+  left: 0px;
+  position: absolute;
+  top: 30px;
+  width: 4px;
+}
+
+.range-controls .toggle-min {
+  left: 20px;
+}
+
+.range-controls .toggle-max {
+  left: 145px;
+}
+
+.price-controls {
+  font-size: 0;
+}
+
+.price-controls label {
+  display: inline-block;
+  font-size: 16px;
+  text-transform: uppercase;
+  width: 50%;
+}
+
+.max-price {
+  text-align: right;
+}
+
+.price-controls input {
+  background: #f1f1f1;
+  border: none;
+  border-radius: 5px;
+  color: #283136;
+  font-family: "Roboto", "Tahoma", sans-serif;
+  font-size: 16px;
+  margin-left: 10px;
+  outline: none;
+  padding: 8px 10px;
+  text-align: center;
+  width: 60px;
+}
+
+.goods-filters .grid {
+  font-size: 16px;
+  list-style: none;
+  margin: 0;
+  margin-bottom: 45px;
+  padding: 0;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label{
+  cursor: pointer;
+  display: block;
+  line-height: 20px;
+  margin-bottom: 20px;
+  padding-left: 35px;
+  position: relative;
+}
+
+input[type="radio"] + label::before {
+  background-color: #ffffff;
+  border: 3px solid #c1c1c1;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 16px;
+  left: 0;
+  position: absolute;
+  top: -2px;
+  width: 16px;
+}
+
+input[type="radio"]:checked + label::after {
+  background-color: #c1c1c1;
+  border-radius: 50%;
+  content: "";
+  height: 8px;
+  left: 7px;
+  position: absolute;
+  top: 5px;
+  width: 8px;
+}
+
+.goods-filters .feature {
+  font-size: 16px;
+  list-style: none;
+  margin: 0;
+  margin-bottom: 45px;
+  padding: 0;
+}
+
+input[type="checkbox"] + label::before{
+  background: url("../img/sprite.png") no-repeat;
+  background-position: -20px -130px;
+  content: "";
+  display: block;
+  height: 23px;
+  left: 0;
+  position: absolute;
+  top: -2px;
+  width: 23px;
+}
+
+input[type="checkbox"]:checked + label::before{
+  background: url("../img/sprite.png") no-repeat;
+  background-position: -20px -193px;;
+  content: "";
+  display: block;
+  height: 23px;
+  left: 0;
+  position: absolute;
+  top: -2px;
+  width: 23px;
+}
+
+.show-btn {
+  background-color: #f1f1f1;
+  color: #000000;
+  font-weight: 700;
+}
+
+.show-btn:hover {
+  background-color: #e5e5e5;
+}
+
+.show-btn:active {
+  background-color: #d5d5d5;
+  box-shadow: inset 0 3px 0 0 #b5b5b5;
 }
 
 .goods-pages {
   float: right;
   width: 560px;
+
+  outline: 1px dashed red;
+}
+
+.pages-filter {
+  font-size: 12px;
+  line-height: 18px;
+  margin-top: 5px;
+  text-transform: uppercase;
+
+  outline: 1px dashed red;
+}
+
+.pages-filter p {
+  display: inline-block;
+  margin: 0;
+  margin-right: 40px;
+}
+
+.pages-filter .sort {
+  display: inline-block;
+  font-size: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sort li {
+  display: inline-block;
+  font-size: 12px;
+  margin-right: 45px;
+}
+
+.sort a {
+  color: #b2b2b2;
+  display: block;
+  text-decoration: none;
+}
+
+/* TODO: Разобраться с логикой. Когда элемент подчеркнут? */
+.sort-current {
+  position: relative;
+}
+
+.sort-current::after {
+  border-bottom: 1px dotted #00ca74;
+  bottom: 0;
+  content: "";
+  left: 1px;
+  position: absolute;
+  right: 0px;
+}
+
+.pages-filter .ascdesc {
+  display: block;
+  position: relative;
+}
+
+.pages-filter .ascdesc::before {
+	border-top: 10px solid #00ca74;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+  content: "";
+  height: 0;
+  right: 15px;
+  position: absolute;
+  bottom: 8px;
+  width: 0;
+}
+
+.pages-filter .ascdesc::after {
+	border-bottom: 10px solid #c1c1c1;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+  content: "";
+  height: 0;
+  right: 0;
+  position: absolute;
+  bottom: 8px;
+  width: 0;
 }
 
 .goods-items {
   font-size: 0;
+
+  outline: 1px dashed red;
 }
 
 .goods-item {
@@ -488,8 +782,75 @@ h3 {
   margin-right: 0;
 }
 
-.goods {
-  margin-bottom: 80px;
+.goods-item-header {
+  background-color: #f1f1f1;
+  border-radius: 5px 5px 0 0;
+  font-size: 0;
+  height: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-left: 12px;
+}
+
+.goods-item-header li {
+  display: inline-block;
+  background-color: #ffffff;
+  border-radius: 50%;
+  height: 8px;
+  margin-right: 6px;
+  margin-top: 10px;
+  width: 8px;
+}
+
+.goods-item:hover .goods-item-header {
+  background-color: #797979;
+}
+
+.goods-item-content {
+  position: relative;
+}
+
+.goods-item-content img {
+  display:block;
+  height: 240px;
+  width: 240px;
+}
+
+.content-description {
+  /*display: none;*/
+  background-color: #ffffff;
+  display: block;
+  height: 200px;
+  left: 20px;
+  top: 20px;
+  position: absolute;
+  width: 200px;
+}
+
+.content-description p {
+  margin: 0;
+  text-align: center;
+  padding: 0;
+}
+
+.content-description .name {
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 18px;
+  margin-top: 35px;
+  text-transform: uppercase;
+}
+
+.content-description .desc {
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 30px;
+}
+
+/* TODO: Выровнять кнопку */
+.content-description .btn {
+
 }
 
 .main-footer {
@@ -541,6 +902,7 @@ h3 {
   margin-top: 20px;
 }
 
+/* TODO: Как правильно выровнять кнопку? */
 .map-contacts .btn {
   margin-left: 15px;
 }
