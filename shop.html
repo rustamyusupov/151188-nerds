@@ -66,7 +66,7 @@
                 <label for="grid-adaptive">Адаптивная</label>
               </li>
               <li>
-                <input id="grid-fixed" type="radio" name="grids">
+                <input id="grid-fixed" type="radio" name="grids" checked disabled>
                 <label for="grid-fixed">Фиксированная</label>
               </li>
               <li>
@@ -81,7 +81,7 @@
                 <label for="feature-slider">Слайдер</label>
               </li>
               <li>
-                <input id="feature-privilege" type="checkbox" name="features">
+                <input id="feature-privilege" type="checkbox" name="features" disabled>
                 <label for="feature-privilege">Блок преимуществ</label>
               </li>
               <li>
@@ -89,7 +89,7 @@
                 <label for="feature-news">Новости</label>
               </li>
               <li>
-                <input id="feature-gallery" type="checkbox" name="features">
+                <input id="feature-gallery" type="checkbox" name="features" checked disabled>
                 <label for="feature-gallery">Галерея</label>
               </li>
               <li>
@@ -104,8 +104,9 @@
           <div class="pages-filter">
             <p>Сортировать:</p>
             <ul class="sort">
-              <li>
-                <a class="sort-current" href="#">По цене</a>
+              <li class="sort-current">
+                <!-- TODO: Или здесь тоже должна быть ссылка? -->
+                <span>По цене</span>
               </li>
               <li>
                 <a href="#">По типу</a>
@@ -114,7 +115,7 @@
                 <a href="#">По функционалу</a>
               </li>
             </ul>
-            <div class="ascdesc">
+            <div class="ascdesc" checked>
             </div>
           </div>
           <div class="goods-items">
@@ -128,7 +129,7 @@
                 <img src="img/shop-aviator.jpg" width="240" height="240" alt="Миниатюра Aviator">
                 <div class="content-description">
                   <p class="name">Aviator</p>
-                  <p class="desc">Одностраничный макет с авторским дизайном</p>
+                  <p class="desc">Одностраничный макет<br>с авторским дизайном</p>
                   <a class="btn" href="#">8000 р.</a>
                 </div>
               </div>
@@ -143,8 +144,8 @@
                 <img src="img/shop-sunset.jpg" width="240" height="240" alt="Миниатюра Sunset">
                 <div class="content-description">
                   <p class="name">Sunset</p>
-                  <p class="desc"></p>
-                  <a class="btn" href="#"></a>
+                  <p class="desc">Интернет-магазин<br>с личным кабинетом</p>
+                  <a class="btn" href="#">10000 р.</a>
                 </div>
               </div>
             </div>
@@ -158,8 +159,8 @@
                 <img src="img/shop-forte.jpg" width="240" height="240" alt="Миниатюра Forte">
                 <div class="content-description">
                   <p class="name">Forte</p>
-                  <p class="desc"></p>
-                  <a class="btn" href="#"></a>
+                  <p class="desc">Отличный макет<br>для личного блога</p>
+                  <a class="btn" href="#">5000 р.</a>
                 </div>
               </div>
             </div>
@@ -172,9 +173,9 @@
               <div class="goods-item-content">
                 <img src="img/shop-marquee.jpg" width="240" height="240" alt="Миниатюра Marquee">
                 <div class="content-description">
-                  <p class="name">Marquee</p>
-                  <p class="desc"></p>
-                  <a class="btn" href="#"></a>
+                  <p class="name">Modern Organic Thai</p> <!-- TODO: Как сделать, чтобы здесь отступ был меньше? -->
+                  <p class="desc">Сайт для ресторана<br>быстрого питания</p>
+                  <a class="btn" href="#">12000 р.</a>
                 </div>
               </div>
             </div>
@@ -188,8 +189,8 @@
                 <img src="img/shop-avenue.jpg" width="239" height="240" alt="Миниатюра Avenue">
                 <div class="content-description">
                   <p class="name">Avenue</p>
-                  <p class="desc"></p>
-                  <a class="btn" href="#"></a>
+                  <p class="desc">Макет для блога<br>о путешествиях</p>
+                  <a class="btn" href="#">8000 р.</a>
                 </div>
               </div>
             </div>
@@ -203,8 +204,8 @@
                 <img src="img/shop-dovetail.jpg" width="239" height="240" alt="Миниатюра Dovetail">
                 <div class="content-description">
                   <p class="name">Dovetail</p>
-                  <p class="desc"></p>
-                  <a class="btn" href="#"></a>
+                  <p class="desc">Интернет-магазин<br>с галереей товаров</p>
+                  <a class="btn" href="#">14000 р.</a>
                 </div>
               </div>
             </div>
@@ -217,8 +218,8 @@
             <li>
               <a href="#">3</a>
             </li>
-            <li>
-              <a class="next" href="#">Следующая</a>
+            <li class="next">
+              <a href="#">Следующая</a>
             </li>
           </ul>
         </div>

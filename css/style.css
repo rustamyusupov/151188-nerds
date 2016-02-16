@@ -160,8 +160,6 @@ h3 {
   text-align: center;
   text-transform: uppercase;
   width: 700px;
-
-  outline: 1px dashed red;
 }
 
 .item-content {
@@ -193,6 +191,15 @@ h3 {
   text-decoration: none;
   text-transform: uppercase;
   vertical-align: middle;
+}
+
+.btn:hover {
+  background-color: #d6494d;
+}
+
+.btn:active {
+  background-color: #b63538;
+  box-shadow: inset 0 3px 0 0 #9b2d30;
 }
 
 .main-carousel {
@@ -330,15 +337,6 @@ h3 {
 .main-features-item p {
   font-size: 15px;
   line-height: 22px;
-}
-
-.btn:hover {
-  background-color: #d6494d;
-}
-
-.btn:active {
-  background-color: #b63538;
-  box-shadow: inset 0 3px 0 0 #9b2d30;
 }
 
 .btn-green {
@@ -492,15 +490,11 @@ h3 {
 .goods-filters {
   float: left;
   width: 240px;
-
-  outline: 1px dashed red;
 }
 
 .filter-worth {
   margin-bottom: 45px;
   width: 240px;
-
-  outline: 1px dashed red;
 }
 
 .filter-name {
@@ -599,6 +593,7 @@ input[type="checkbox"] {
 
 input[type="radio"] + label,
 input[type="checkbox"] + label{
+  color: #283136;
   cursor: pointer;
   display: block;
   line-height: 20px;
@@ -620,6 +615,15 @@ input[type="radio"] + label::before {
   width: 16px;
 }
 
+input[type="radio"] + label:hover,
+input[type="checkbox"] + label:hover{
+  color: #000000;
+}
+
+input[type="radio"] + label:hover::before {
+  border-color: #b5b5b5;
+}
+
 input[type="radio"]:checked + label::after {
   background-color: #c1c1c1;
   border-radius: 50%;
@@ -629,6 +633,24 @@ input[type="radio"]:checked + label::after {
   position: absolute;
   top: 5px;
   width: 8px;
+}
+
+input[type="radio"]:checked + label:hover::after {
+  background-color: #b5b5b5;
+}
+
+input[type="radio"]:disabled + label,
+input[type="checkbox"]:disabled + label {
+  color: #a9adaf;
+  cursor: default;
+}
+
+input[type="radio"]:disabled + label::before {
+  border-color: #e9e9e9;
+}
+
+input[type="radio"]:checked:disabled + label::after {
+  background-color: #e9e9e9;
 }
 
 .goods-filters .feature {
@@ -651,9 +673,14 @@ input[type="checkbox"] + label::before{
   width: 23px;
 }
 
+input[type="checkbox"] + label:hover::before{
+  background-position: -20px -256px;
+}
+
+/* TODO: Можно ли такую галочку на CSS сделать? */
 input[type="checkbox"]:checked + label::before{
   background: url("../img/sprite.png") no-repeat;
-  background-position: -20px -193px;;
+  background-position: -20px -319px;
   content: "";
   display: block;
   height: 23px;
@@ -661,6 +688,18 @@ input[type="checkbox"]:checked + label::before{
   position: absolute;
   top: -2px;
   width: 23px;
+}
+
+input[type="checkbox"]:checked + label:hover::before{
+  background-position: -20px -445px;
+}
+
+input[type="checkbox"]:disabled + label::before {
+  background-position: -20px -193px;
+}
+
+input[type="checkbox"]:checked:disabled + label::before {
+  background-position: -20px -382px;
 }
 
 .show-btn {
@@ -681,17 +720,14 @@ input[type="checkbox"]:checked + label::before{
 .goods-pages {
   float: right;
   width: 560px;
-
-  outline: 1px dashed red;
 }
 
 .pages-filter {
   font-size: 12px;
   line-height: 18px;
   margin-top: 5px;
+  margin-bottom: 20px;
   text-transform: uppercase;
-
-  outline: 1px dashed red;
 }
 
 .pages-filter p {
@@ -717,15 +753,11 @@ input[type="checkbox"]:checked + label::before{
 .sort a {
   color: #b2b2b2;
   display: block;
+  position: relative;
   text-decoration: none;
 }
 
-/* TODO: Разобраться с логикой. Когда элемент подчеркнут? */
-.sort-current {
-  position: relative;
-}
-
-.sort-current::after {
+.sort a::after {
   border-bottom: 1px dotted #00ca74;
   bottom: 0;
   content: "";
@@ -734,13 +766,38 @@ input[type="checkbox"]:checked + label::before{
   right: 0px;
 }
 
+.sort a:hover {
+  color: #000000;
+}
+
+.sort a:hover::after {
+  border-bottom: 1px solid #00ca74;
+}
+
+.sort a:active::after {
+  border: none;
+}
+
+.sort .sort-current {
+  color: #000000;
+  cursor: default;
+}
+
+/*.sort .sort-current::after {
+  border: none;
+}
+
+.sort .sort-current:hover::after {
+  border: none;
+}*/
+
 .pages-filter .ascdesc {
   display: block;
   position: relative;
 }
 
 .pages-filter .ascdesc::before {
-	border-top: 10px solid #00ca74;
+	border-top: 10px solid #c1c1c1;
 	border-left: 5px solid transparent;
 	border-right: 5px solid transparent;
   content: "";
@@ -763,10 +820,25 @@ input[type="checkbox"]:checked + label::before{
   width: 0;
 }
 
+/* TODO: Или это два элемента? */
+.pages-filter .ascdesc:active::before {
+  border-top: 10px solid #000000;
+}
+
+.pages-filter .ascdesc:active::after {
+  border-bottom: 10px solid #000000;
+}
+
+.pages-filter .ascdesc:checked::before {
+  border-top: 10px solid #00ca74;
+}
+
+.pages-filter .ascdesc:checked::after {
+  border-bottom: 10px solid #00ca74;
+}
+
 .goods-items {
   font-size: 0;
-
-  outline: 1px dashed red;
 }
 
 .goods-item {
@@ -818,11 +890,11 @@ input[type="checkbox"]:checked + label::before{
 }
 
 .content-description {
-  /*display: none;*/
   background-color: #ffffff;
   display: block;
   height: 200px;
   left: 20px;
+  text-align: center;
   top: 20px;
   position: absolute;
   width: 200px;
@@ -830,14 +902,13 @@ input[type="checkbox"]:checked + label::before{
 
 .content-description p {
   margin: 0;
-  text-align: center;
   padding: 0;
 }
 
 .content-description .name {
   font-size: 18px;
   line-height: 24px;
-  margin-bottom: 18px;
+  margin-bottom: 18px; /* TODO: У Marquee кнопка выходит за границу */
   margin-top: 35px;
   text-transform: uppercase;
 }
@@ -845,16 +916,88 @@ input[type="checkbox"]:checked + label::before{
 .content-description .desc {
   font-size: 14px;
   line-height: 18px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
-/* TODO: Выровнять кнопку */
 .content-description .btn {
+  font-size: 18px;
+  line-height: 24px;
+  height: 22px;
+  margin: 0;
+  padding: 9px 0;
+  width: 140px;
+}
 
+.content-description {
+  display: none;
+}
+
+.goods-item:hover .content-description {
+  display: block;
+}
+
+.goods-paginator {
+  font-size: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.goods-paginator li {
+  background-color: #f1f1f1;
+  border-radius: 3%;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 12px;
+  height: 29px;
+  line-height: 18px;
+  margin-right: 10px;
+  padding-top: 9px;
+  text-align: center;
+  width: 38px;
+}
+
+.goods-paginator li:hover {
+  background-color: #e5e5e5;
+  /*border-color: #e5e5e5;*/
+}
+
+.goods-paginator li:active {
+  background-color: #d5d5d5;
+  box-shadow: inset 0 3px 0 0 #b5b5b5;
+}
+
+.goods-paginator .current,
+.goods-paginator .current:hover {
+  background-color: #f1f1f1;
+  color: #000000;
+  cursor: default;
+  position: relative;
+}
+
+/* TODO: Пока не придумал как сделать кнопку с рамкой и при этом, чтобы правильно рисовало тень при нажатии */
+.goods-paginator .current:after {
+  content: "";
+  background-color: #ffffff;
+  height: 34px;
+  left: 2px;
+  position: absolute;
+  top: 2px;
+  width: 34px;
+  /*z-index: 100;*/
+}
+
+.goods-paginator .next {
+  width: 140px;
+}
+
+.goods-paginator a {
+  color: #000000;
+  text-decoration: none;
 }
 
 .main-footer {
-  margin-top: 90px;
+  margin-top: 80px;
   margin-bottom: 75px;
 }
 
@@ -938,15 +1081,15 @@ input[type="checkbox"]:checked + label::before{
 
 /* TODO: Как правильно центрировать иконки? Сейчас рассчитал */
 .social-vk {
-  background-position: -2px -355px;
+  background-position: -2px -607px;
 }
 
 .social-fb {
-  background-position: 5px -236px;
+  background-position: 5px -488px;
 }
 
 .social-ig {
-  background-position: 1px -297px;
+  background-position: 1px -549px;
 }
 
 .social-btn:hover {
@@ -972,7 +1115,8 @@ input[type="checkbox"]:checked + label::before{
   margin: 0;
 }
 
-/*.sprite-cart {
+/*
+.sprite-cart {
     width: 15px;
     height: 15px;
     background-position: -20px -20px;
@@ -990,26 +1134,52 @@ input[type="checkbox"]:checked + label::before{
     background-position: -20px -130px;
 }
 
+.sprite-check-off-disabled {
+    width: 23px;
+    height: 23px;
+    background-position: -20px -193px;
+}
+
+.sprite-check-off-hover {
+    width: 23px;
+    height: 23px;
+    background-position: -20px -256px;
+}
+
 .sprite-check-on {
     width: 27px;
     height: 23px;
-    background-position: -20px -193px;
+    background-position: -20px -319px;
+}
+
+.sprite-check-on-disabled {
+    width: 27px;
+    height: 23px;
+    background-position: -20px -382px;
+}
+
+.sprite-check-on-hover {
+    width: 27px;
+    height: 23px;
+    background-position: -20px -445px;
 }
 
 .sprite-fb {
     width: 12px;
     height: 22px;
-    background-position: -20px -256px;
+    background-position: -20px -508px;
 }
 
 .sprite-ig {
     width: 21px;
     height: 21px;
-    background-position: -20px -318px;
+    background-position: -20px -570px;
 }
 
 .sprite-vk {
     width: 26px;
     height: 15px;
-    background-position: -20px -379px;
-}*/
+    background-position: -20px -631px;
+}
+
+*/
