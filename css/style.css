@@ -1,3 +1,10 @@
+/*
+TODO:
+1. В каком порядке располагают блоки в CSS?
+2. Как правильно указывать вес шрифта, цифрами или словами (700 или bold)?
+3.
+*/
+
 body {
   color: #000000;
   font-family: "Roboto", "Tahoma", sans-serif;
@@ -133,7 +140,7 @@ h3 {
   height: 15px;
   left: 6px;
   position: absolute;
-  top: 17px;
+  top: 16px;
   width: 15px;
 }
 
@@ -187,9 +194,8 @@ h3 {
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;
-  margin-right: 16px;
   outline: none;
-  padding: 12px 40px;
+  padding: 11px 40px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -263,7 +269,8 @@ h3 {
 
 .item-content .btn {
   margin-top: 25px;
-  padding: 12px 70px;
+  padding-left: 70px;
+  padding-right: 70px;
 }
 
 .main-carousel-item:nth-child(1) {
@@ -735,23 +742,21 @@ input[type="checkbox"]:checked:disabled + label::before {
   line-height: 18px;
   margin-top: 5px;
   margin-bottom: 20px;
+  position: relative;
   text-transform: uppercase;
 }
 
 .pages-filter p {
-  display: inline-block;
+  float: left;
   margin: 0;
   margin-right: 40px;
-  vertical-align: top;
 }
 
 .pages-filter .sort {
-  display: inline-block;
   font-size: 0;
   list-style: none;
   margin: 0;
   padding: 0;
-  vertical-align: top;
 }
 
 .sort li {
@@ -794,60 +799,46 @@ input[type="checkbox"]:checked:disabled + label::before {
   cursor: default;
 }
 
-/*.sort .sort-current::after {
-  border: none;
-}
-
-.sort .sort-current:hover::after {
-  border: none;
-}*/
-
-.pages-filter .ascdesc {
-  display: block;
-  position: relative;
-}
-
-.pages-filter .ascdesc::before {
+/* TODO: Как правильно разметить и стилизовать данный эелемент? */
+.pages-filter::before {
 	border-top: 10px solid #c1c1c1;
 	border-left: 5px solid transparent;
 	border-right: 5px solid transparent;
   content: "";
   height: 0;
-  right: 15px;
   position: absolute;
-  bottom: 8px;
+  right: 15px;
+  top: 3px;
   width: 0;
 }
 
-.pages-filter .ascdesc::after {
+.pages-filter::after {
 	border-bottom: 10px solid #c1c1c1;
 	border-left: 5px solid transparent;
 	border-right: 5px solid transparent;
   content: "";
   height: 0;
-  right: 0;
   position: absolute;
-  bottom: 8px;
+  right: 0;
+  top: 3px;
   width: 0;
 }
 
-/* TODO: Или это два элемента? */
-/* TODO: Переделать этот кусок */
-.pages-filter .ascdesc:active::before {
+/*.pages-filter:active::before {
   border-top: 10px solid #000000;
 }
 
-.pages-filter .ascdesc:active::after {
+.pages-filter:active::after {
   border-bottom: 10px solid #000000;
 }
 
-.pages-filter .ascdesc:checked::before {
+.pages-filter:checked::before {
   border-top: 10px solid #00ca74;
 }
 
-.pages-filter .ascdesc:checked::after {
+.pages-filter:checked::after {
   border-bottom: 10px solid #00ca74;
-}
+}*/
 
 .goods-items {
   font-size: 0;
@@ -897,7 +888,6 @@ input[type="checkbox"]:checked:disabled + label::before {
 }
 
 .goods-item-content img {
-  display:block;
   height: 240px;
   width: 240px;
 }
@@ -913,6 +903,7 @@ input[type="checkbox"]:checked:disabled + label::before {
   width: 200px;
 }
 
+/* TODO: Как правильно организовать отступы между элементами? */
 .content-description p {
   margin: 0;
   padding: 0;
@@ -921,7 +912,7 @@ input[type="checkbox"]:checked:disabled + label::before {
 .content-description .name {
   font-size: 18px;
   line-height: 24px;
-  margin-bottom: 18px; /* TODO: У Marquee кнопка выходит за границу */
+  /*margin-bottom: 18px; */
   margin-top: 35px;
   text-transform: uppercase;
 }
@@ -929,7 +920,7 @@ input[type="checkbox"]:checked:disabled + label::before {
 .content-description .desc {
   font-size: 14px;
   line-height: 18px;
-  margin-bottom: 25px;
+  /*margin-bottom: 25px;*/
 }
 
 .content-description .btn {
@@ -973,7 +964,6 @@ input[type="checkbox"]:checked:disabled + label::before {
 
 .goods-paginator li:hover {
   background-color: #e5e5e5;
-  /*border-color: #e5e5e5;*/
 }
 
 .goods-paginator li:active {
@@ -982,23 +972,16 @@ input[type="checkbox"]:checked:disabled + label::before {
 }
 
 .goods-paginator .current,
-.goods-paginator .current:hover {
-  background-color: #f1f1f1;
+.goods-paginator .current:hover,
+.goods-paginator .current:active {
+  background-color: #ffffff;
+  border: 2px solid #f2f2f2;
+  box-shadow: none;
   color: #000000;
   cursor: default;
-  position: relative;
-}
-
-/* TODO: Пока не придумал как сделать кнопку с рамкой и при этом, чтобы правильно рисовало тень при нажатии */
-.goods-paginator .current:after {
-  content: "";
-  background-color: #ffffff;
-  height: 34px;
-  left: 2px;
-  position: absolute;
-  top: 2px;
+  height: 27px;
+  padding-top: 7px;
   width: 34px;
-  /*z-index: 100;*/
 }
 
 .goods-paginator .next {
@@ -1030,11 +1013,11 @@ input[type="checkbox"]:checked:disabled + label::before {
   float: left;
   margin-left: 160px;
   margin-top: 90px;
-  padding-bottom: 25px;
-  padding-left: 20px;
-  padding-right: 25px;
-  padding-top: 5px;
-  width: 210px;
+  height: 240px;
+  width: 250px;
+
+  /* TODO: Как правильно выровнять кнопку? */
+  position: relative;
 }
 
 .map-contacts .contacts-title {
@@ -1042,7 +1025,9 @@ input[type="checkbox"]:checked:disabled + label::before {
   font-size: 16px;
   font-weight: 500;
   line-height: 30px;
-  margin-bottom: 15px;
+  margin-bottom: 11px;
+  margin-top: 26px;
+  padding-left: 20px;
   text-transform: uppercase;
 }
 
@@ -1051,6 +1036,7 @@ input[type="checkbox"]:checked:disabled + label::before {
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
+  padding-left: 20px;
 }
 
 .map-contacts .contacts-phone {
@@ -1059,9 +1045,15 @@ input[type="checkbox"]:checked:disabled + label::before {
   margin-top: 20px;
 }
 
-/* TODO: Как правильно выровнять кнопку? */
 .map-contacts .btn {
-  margin-left: 15px;
+  padding-left: 54px;
+  padding-right: 54px;
+
+  /* TODO: Как правильно выровнять кнопку? */
+  position: absolute;
+  bottom: 26px;
+  left: 50%;
+  margin-left: -102px;
 }
 
 .footer-map .map-pointer {

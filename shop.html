@@ -33,6 +33,7 @@
               </li>
             </ul>
           </nav>
+          <!-- TODO: Как будет выглядеть разметка, если этот раздел будет текущим? Как его стилизовать? -->
           <div class="user-block">
             <a class="cart" href="#">Корзина</a>
           </div>
@@ -102,7 +103,7 @@
           </aside>
         </form>
         <div class="goods-pages">
-          <div class="pages-filter">
+          <div class="pages-filter clearfix">
             <p>Сортировать:</p>
             <ul class="sort">
               <li class="sort-current">
@@ -116,8 +117,6 @@
                 <a href="#">По функционалу</a>
               </li>
             </ul>
-            <div class="ascdesc">
-            </div>
           </div>
           <div class="goods-items">
             <div class="goods-item">
@@ -229,10 +228,12 @@
     <footer class="main-footer">
       <div class="footer-map clearfix">
         <div class="map-contacts">
-          <p>N&euml;rds design studio</p>
+          <!-- TODO: Нужен ли здесь отдельный класс? -->
+          <p class="contacts-title">N&euml;rds design studio</p>
           <p>191186, Санкт-Петербург,<br>
-             ул. Б. Конюшенная, д. 19/8<br>
-             тел. +7 (812) 275-75-75</p>
+             ул. Б. Конюшенная, д. 19/8
+             <!-- TODO: Нужен ли здесь span? -->
+             <span class="contacts-phone">тел. +7 (812) 275-75-75</span></p>
              <button class="btn">Напишите нам</button>
         </div>
         <div class="map-pointer">
