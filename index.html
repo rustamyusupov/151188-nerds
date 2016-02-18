@@ -107,7 +107,7 @@
         <div class="main-description-bottom clearfix">
           <div class="main-description-left">
             <h3>Выполняем заказы на разработку:</h3>
-            <ul class="description-develop"> <!-- TODO: Нужен ли этот класс -->
+            <ul>
               <li>Веб-сайтов любой сложности</li>
               <li>Мобильных приложений для iOS и Android</li>
               <li>Слайдшоу и видео для корпоративных презентаций</li>
@@ -115,7 +115,7 @@
           </div>
           <div class="main-description-right">
             <h3>Как мы работаем:</h3>
-            <ul class="description-conditions"> <!-- TODO: Нужен ли этот класс -->
+            <ul>
               <li>С самоотдачей 146%</li>
               <li>Соблюдая сроки на 100%</li>
               <li>По предоплате 50%</li>
@@ -124,7 +124,6 @@
         </div>
       </div>
       <div class="main-gallery">
-        <!-- TODO: Сохранить картинки в svg -->
         <a class="main-gallery-item" href="#">
           <img src="img/glukhanko.png" width="198" height="37" alt="Глуханко">
         </a>
@@ -138,17 +137,18 @@
     </main>
     <footer class="main-footer">
       <div class="footer-map clearfix">
-        <div class="map-contacts">
-          <!-- TODO: Нужен ли здесь отдельный класс? -->
-          <p class="contacts-title">N&euml;rds design studio</p>
-          <p>191186, Санкт-Петербург,<br>
-             ул. Б. Конюшенная, д. 19/8
-             <!-- TODO: Нужен ли здесь span? -->
-             <span class="contacts-phone">тел. +7 (812) 275-75-75</span></p>
-             <button class="btn">Напишите нам</button>
-        </div>
-        <div class="map-pointer">
-          <img src="img/map-pointer.png" width="231" height="190" alt="Указатель студии на карте">
+        <!-- TODO: Правильно ли использую контейнер с распоркой для карты? -->
+        <div class="container clearfix">
+          <div class="map-contacts">
+            <p class="contacts-title">N&euml;rds design studio</p>
+            <p>191186, Санкт-Петербург,<br>
+               ул. Б. Конюшенная, д. 19/8</p>
+               <p>тел. +7 (812) 275-75-75</p>
+               <button class="btn">Напишите нам</button>
+          </div>
+          <div class="map-pointer">
+            <img src="img/map-pointer.png" width="231" height="190" alt="Указатель студии на карте">
+          </div>
         </div>
       </div>
       <div class="container clearfix">

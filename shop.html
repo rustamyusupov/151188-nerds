@@ -107,7 +107,6 @@
             <p>Сортировать:</p>
             <ul class="sort">
               <li class="sort-current">
-                <!-- TODO: Или здесь тоже должна быть ссылка? -->
                 <span>По цене</span>
               </li>
               <li>
@@ -116,6 +115,8 @@
               <li>
                 <a href="#">По функционалу</a>
               </li>
+              <li class="desc desc-current"></li>
+              <li class="asc"></li>
             </ul>
           </div>
           <div class="goods-items">
@@ -173,7 +174,7 @@
               <div class="goods-item-content">
                 <img src="img/shop-marquee.jpg" width="240" height="240" alt="Миниатюра Marquee">
                 <div class="content-description">
-                  <a class="name" href="#">Modern Organic Thai</a> <!-- TODO: Как сделать, чтобы здесь отступ был меньше? -->
+                  <a class="name" href="#">Modern Organic Thai</a>
                   <p>Сайт для ресторана<br>быстрого питания</p>
                   <a class="btn" href="#">12000 р.</a>
                 </div>
@@ -227,17 +228,18 @@
     </main>
     <footer class="main-footer">
       <div class="footer-map clearfix">
-        <div class="map-contacts">
-          <!-- TODO: Нужен ли здесь отдельный класс? -->
-          <p class="contacts-title">N&euml;rds design studio</p>
-          <p>191186, Санкт-Петербург,<br>
-             ул. Б. Конюшенная, д. 19/8
-             <!-- TODO: Нужен ли здесь span? -->
-             <span class="contacts-phone">тел. +7 (812) 275-75-75</span></p>
-             <button class="btn">Напишите нам</button>
-        </div>
-        <div class="map-pointer">
-          <img src="img/map-pointer.png" width="231" height="190" alt="Указатель студии на карте">
+        <!-- TODO: Правильно ли использую контейнер с распоркой для карты? -->
+        <div class="container clearfix">
+          <div class="map-contacts">
+            <p class="contacts-title">N&euml;rds design studio</p>
+            <p>191186, Санкт-Петербург,<br>
+               ул. Б. Конюшенная, д. 19/8</p>
+               <p>тел. +7 (812) 275-75-75</p>
+               <button class="btn">Напишите нам</button>
+          </div>
+          <div class="map-pointer">
+            <img src="img/map-pointer.png" width="231" height="190" alt="Указатель студии на карте">
+          </div>
         </div>
       </div>
       <div class="container clearfix">

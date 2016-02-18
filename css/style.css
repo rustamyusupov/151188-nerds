@@ -1,8 +1,6 @@
-/*
-TODO:
-1. В каком порядке располагают блоки в CSS?
-2. Как правильно указывать вес шрифта, цифрами или словами (700 или bold)?
-3. Есть ли форма входа у Nerds?
+/* TODO:
+  1. Почему при Pixel Perfect у меня шрифты отличаются по ширине?
+  2. Хватит ли такой подводки по Pixel Perfect? Главная норм, а Магазин?
 */
 
 body {
@@ -16,7 +14,7 @@ body {
 
 h1 {
   font-size: 40px;
-  line-height: 52px;
+  line-height: 48px;
 }
 
 h2 {
@@ -41,6 +39,7 @@ h3 {
   width: 880px;
 }
 
+/* Header */
 .main-header {
   background-color: #eeeeee;
   margin-bottom: 80px;
@@ -48,7 +47,7 @@ h3 {
 }
 
 .header-top {
-  margin-bottom: 60px;
+  margin-bottom: 32px;
 }
 
 .main-logo {
@@ -64,8 +63,8 @@ h3 {
 
 .main-navigation {
   float: left;
-  padding-left: 160px;
-  margin-top: 16px;
+  padding-left: 139px;
+  margin-top: 17px;
   width: 460px;
 }
 
@@ -88,7 +87,7 @@ h3 {
 .main-navigation a {
   color: #000000;
   display: block;
-  padding: 10px 20px;
+  padding: 10px 22px;
   text-decoration: none;
 }
 
@@ -108,12 +107,12 @@ h3 {
 
 .main-navigation-current span {
   display: block;
-  padding: 10px 20px;
+  padding: 10px 22px;
 }
 
 .user-block {
   float: right;
-  margin-top: 16px;
+  margin-top: 17px;
   width: 100px;
 }
 
@@ -132,8 +131,6 @@ h3 {
 
 .cart::before {
   content: "";
-  /* TODO: Можно ли задавать цвет фона, а не преобладающий в изображении? */
-  background-color: #eeeeee;
   background-image: url("../img/sprite.png");
   background-position: -20px -20px;
   background-repeat: no-repeat;
@@ -160,27 +157,7 @@ h3 {
 
 .cart:active::before {
   background-position: -20px -20px;
-  opacity: 0.5; /* TODO: Верное ли значение, в мекете стоит 15% */
-}
-
-.header-title {
-  font-weight: 500;
-  margin: 0 auto;
-  margin-bottom: 80px;
-  text-align: center;
-  text-transform: uppercase;
-  width: 700px;
-}
-
-.item-content {
-  float: left;
-  margin-right: 70px;
-  width: 470px;
-}
-
-.item-background {
-  float: right;
-  width: 340px;
+  opacity: 0.5;
 }
 
 .btn {
@@ -195,7 +172,7 @@ h3 {
   font-weight: 500;
   line-height: 18px;
   outline: none;
-  padding: 11px 40px;
+  padding: 10px 40px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -211,9 +188,9 @@ h3 {
   box-shadow: inset 0 3px 0 0 #9b2d30;
 }
 
+/* Main page */
 .main-carousel {
   margin: 0 auto;
-  margin-bottom: 80px;
   position: relative;
   width: 880px;
 }
@@ -224,17 +201,45 @@ h3 {
   min-height: 310px;
 }
 
+.main-carousel-item .item-content {
+  float: left;
+  margin-right: 70px;
+  padding: 31px 0;
+  width: 480px;
+}
+
+.main-carousel-item .content-name {
+  display: block;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 36px;
+  margin-bottom: 18px;
+}
+
+.main-carousel-item p {
+  color: #283136;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.main-carousel-item .btn {
+  margin-top: 11px;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
 .main-carousel input[type="radio"] {
   display: none;
 }
 
 .main-carousel-slider {
-  bottom: 70px;
+  bottom: 82px;
   left: 50%;
   margin-left: -100px;
   position: absolute;
   text-align: center;
-  width: 200px;
+  width: 184px;
 }
 
 .main-carousel-slider label {
@@ -249,42 +254,15 @@ h3 {
   width: 4px;
 }
 
-.item-content {
-  padding: 30px 0;
-  width: 480px;
-}
-
-.content-name {
-  font-size: 36px;
-  font-weight: 500;
-  line-height: 36px;
-}
-
-.item-content p {
-  color: #283136;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 22px;
-}
-
-.item-content .btn {
-  margin-top: 25px;
-  padding-left: 70px;
-  padding-right: 70px;
-}
-
 .main-carousel-item:nth-child(1) {
-  background-color: #eeeeee;
   background-image: url("../img/index-carousel1.png");
 }
 
 .main-carousel-item:nth-child(2) {
-  background-color: #eeeeee;
   background-image: url("../img/index-carousel2.png");
 }
 
 .main-carousel-item:nth-child(3) {
-  background-color: #eeeeee;
   background-image: url("../img/index-carousel3.png");
 }
 
@@ -336,66 +314,68 @@ h3 {
 
 .main-features-item img {
   height: 124px;
-  margin-bottom: 25px;
+  margin-bottom: 17px;
   width: 240px;
 }
 
 .main-features-item .features-name {
+  display: block;
   font-size: 18px;
   line-height: 30px;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
   text-transform: uppercase;
 }
 
 .main-features-item p {
   font-size: 15px;
   line-height: 22px;
+  margin: 0;
+  margin-bottom: 26px;
 }
 
-.btn-green {
+.main-features-item .btn-green {
   background-color: #00ca74;
 }
 
-.btn-green:hover {
+.main-features-item .btn-green:hover {
   background-color: #01a25e;
 }
 
-.btn-green:active {
+.main-features-item .btn-green:active {
   background-color: #009053;
   box-shadow: inset 0 3px 0 0 #007b47;
 }
 
-.btn-yellow {
+.main-features-item .btn-yellow {
   background-color: #efc84a;
 }
 
-.btn-yellow:hover {
+.main-features-item .btn-yellow:hover {
   background-color: #d6ae2c;
 }
 
-.btn-yellow:active {
+.main-features-item .btn-yellow:active {
   background-color: #c09b24;
   box-shadow: inset 0 3px 0 0 #a3841f;
 }
 
 .main-description {
-  margin-bottom: 80px;
+  margin-bottom: 55px;
   padding-top: 60px;
 }
 
 .main-description::after {
-  top: 70px;
+  top: 50px;
 }
 
-/* TODO: Всем ли элементам необходимо прописывать размер шрифта, если он стандартный и указан в боди? */
 .main-description-top {
-  margin-bottom: 20px; /* TODO: Почему здесь такой отступ? */
+  margin-bottom: 12px;
 }
 
 .main-description-top h2 {
   margin: 0;
-  margin-bottom: 20px;
-  margin-top: 15px;
+  margin-bottom: 18px;
+  margin-top: 10px;
 }
 
 .main-description-left {
@@ -410,17 +390,17 @@ h3 {
 }
 
 .main-description-right img {
-  margin-bottom: 27px;
-  margin-left: 30px;
+  margin-bottom: 20px;
+  margin-left: 31px;
 }
 
-.description-foundation {
+.main-description-right .description-foundation {
   margin: 0;
   text-align: center;
   text-transform: uppercase;
 }
 
-.description-foundation p {
+.main-description-right .description-foundation p {
   background-color: #ffffff;
   display: inline;
   margin: 0;
@@ -429,7 +409,7 @@ h3 {
   z-index: 2;
 }
 
-.description-foundation::after {
+.main-description-right .description-foundation::after {
   border-bottom: 2px solid #eeeeee;
   content: "";
   display: block;
@@ -439,7 +419,7 @@ h3 {
 }
 
 .main-description-bottom h3 {
-  margin-bottom: 25px;
+  margin-bottom: 22px;
   text-transform: uppercase;
 }
 
@@ -454,7 +434,7 @@ h3 {
   display: block;
   font-size: 16px;
   line-height: 22px;
-  margin-bottom: 25px;
+  margin-bottom: 22px;
   margin-left: 37px;
   position: relative;
   vertical-align: top;
@@ -472,8 +452,7 @@ h3 {
 
 .main-gallery {
   font-size: 0;
-  padding-bottom: 35px;
-  padding-top: 40px;
+  padding: 40px 0;
 }
 
 .main-gallery::after {
@@ -482,9 +461,15 @@ h3 {
 
 .main-gallery-item {
   display: inline-block;
-  margin-right: 130px;
+  margin-right: 110px;
   opacity: 0.2;
+  padding-left: 12px;
   vertical-align: middle;
+}
+
+/* TODO: Понимаю, как это работает, но не до конца понимаю зачем это нужно? */
+.main-gallery-item img {
+  display: block;
 }
 
 .main-gallery-item:last-child {
@@ -496,8 +481,18 @@ h3 {
   opacity: 1;
 }
 
-.goods {
+/* Shop page */
+.header-title {
+  margin: 0 auto;
   margin-bottom: 80px;
+  margin-top: 54px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 700px;
+}
+
+.goods {
+  margin-bottom: 75px;
 }
 
 .goods-filters {
@@ -515,7 +510,7 @@ h3 {
   font-size: 18px;
   font-weight: 500;
   line-height: 30px;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   text-transform: uppercase;
 }
 
@@ -582,7 +577,6 @@ h3 {
   border: none;
   border-radius: 5px;
   color: #283136;
-  font-family: "Roboto", "Tahoma", sans-serif;
   font-size: 16px;
   margin-left: 10px;
   outline: none;
@@ -594,8 +588,8 @@ h3 {
 .goods-filters .grid {
   font-size: 16px;
   list-style: none;
-  margin: 0;
   margin-bottom: 45px;
+  margin-top: 18px;
   padding: 0;
 }
 
@@ -610,8 +604,8 @@ input[type="checkbox"] + label{
   cursor: pointer;
   display: block;
   line-height: 20px;
-  margin-bottom: 20px;
-  padding-left: 35px;
+  margin-bottom: 21px;
+  padding-left: 33px;
   position: relative;
 }
 
@@ -670,7 +664,7 @@ input[type="radio"]:checked:disabled + label::after {
   font-size: 16px;
   list-style: none;
   margin: 0;
-  margin-bottom: 45px;
+  margin-bottom: 56px;
   padding: 0;
 }
 
@@ -691,7 +685,6 @@ input[type="checkbox"] + label:hover::before{
   background-position: -20px -256px;
 }
 
-/* TODO: Можно ли такую галочку на CSS сделать? */
 input[type="checkbox"]:checked + label::before{
   background-image: url("../img/sprite.png");
   background-position: -20px -319px;
@@ -702,7 +695,7 @@ input[type="checkbox"]:checked + label::before{
   left: 0;
   position: absolute;
   top: -2px;
-  width: 23px;
+  width: 27px;
 }
 
 input[type="checkbox"]:checked + label:hover::before{
@@ -741,7 +734,6 @@ input[type="checkbox"]:checked:disabled + label::before {
   font-size: 12px;
   line-height: 18px;
   margin-top: 5px;
-  margin-bottom: 20px;
   position: relative;
   text-transform: uppercase;
 }
@@ -799,8 +791,7 @@ input[type="checkbox"]:checked:disabled + label::before {
   cursor: default;
 }
 
-/* TODO: Как правильно разметить и стилизовать данный эелемент? */
-.pages-filter::before {
+.sort .desc::before {
 	border-top: 10px solid #c1c1c1;
 	border-left: 5px solid transparent;
 	border-right: 5px solid transparent;
@@ -813,7 +804,15 @@ input[type="checkbox"]:checked:disabled + label::before {
   width: 0;
 }
 
-.pages-filter::after {
+.sort .desc:active::before {
+  border-top: 10px solid #000000;
+}
+
+.sort .desc-current::before {
+  border-top: 10px solid #00ca74;
+}
+
+.sort .asc::before {
 	border-bottom: 10px solid #c1c1c1;
 	border-left: 5px solid transparent;
 	border-right: 5px solid transparent;
@@ -826,21 +825,13 @@ input[type="checkbox"]:checked:disabled + label::before {
   width: 0;
 }
 
-/*.pages-filter:active::before {
-  border-top: 10px solid #000000;
-}
-
-.pages-filter:active::after {
+.sort .asc:active::before {
   border-bottom: 10px solid #000000;
 }
 
-.pages-filter:checked::before {
-  border-top: 10px solid #00ca74;
-}
-
-.pages-filter:checked::after {
+.sort .asc-current::before {
   border-bottom: 10px solid #00ca74;
-}*/
+}
 
 .goods-items {
   font-size: 0;
@@ -849,7 +840,7 @@ input[type="checkbox"]:checked:disabled + label::before {
 .goods-item {
   display: inline-block;
   font-size: 16px;
-  margin-bottom: 80px;
+  margin-bottom: 75px;
   margin-right: 80px;
   vertical-align: top;
   width: 240px;
@@ -875,7 +866,7 @@ input[type="checkbox"]:checked:disabled + label::before {
   background-color: #ffffff;
   border-radius: 50%;
   height: 8px;
-  margin-right: 6px;
+  margin-right: 10px;
   margin-top: 10px;
   vertical-align: top;
   width: 8px;
@@ -890,6 +881,7 @@ input[type="checkbox"]:checked:disabled + label::before {
 }
 
 .goods-item-content img {
+  background-color: #f1f1f1;
   height: 240px;
   width: 240px;
 }
@@ -897,22 +889,22 @@ input[type="checkbox"]:checked:disabled + label::before {
 .content-description {
   background-color: #ffffff;
   display: block;
-  height: 200px;
+  height: 140px;
   left: 20px;
+  padding: 33px 20px;
+  padding-bottom: 28px;
+  position: absolute;
   text-align: center;
   top: 20px;
-  position: absolute;
-  width: 200px;
+  width: 160px;
 }
 
-/* TODO: Как правильно организовать отступы между элементами? */
 .content-description .name {
   color: #000000;
   display: block;
   font-size: 18px;
   line-height: 24px;
-  /*margin-bottom: 18px; */
-  margin-top: 35px;
+  min-height: 35px;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -925,11 +917,13 @@ input[type="checkbox"]:checked:disabled + label::before {
 }
 
 .content-description .btn {
+  bottom: 30px;
   font-size: 18px;
+  left: 50%;
   line-height: 24px;
-  height: 22px;
-  margin: 0;
-  padding: 9px 0;
+  margin-left: -70px;
+  padding: 7px 0;
+  position: absolute;
   width: 140px;
 }
 
@@ -986,6 +980,7 @@ input[type="checkbox"]:checked:disabled + label::before {
 }
 
 .goods-paginator .next {
+  text-transform: uppercase;
   width: 140px;
 }
 
@@ -994,41 +989,43 @@ input[type="checkbox"]:checked:disabled + label::before {
   text-decoration: none;
 }
 
+/* Footer */
 .main-footer {
-  margin-top: 80px;
+  margin-top: 78px;
   margin-bottom: 75px;
 }
 
-.footer-map {
-  margin-bottom: 75px;
-
   /* TODO: В первом приближении, потом заменю на интерактивную */
+.footer-map {
+  background-color: #e9e5dc;
   background-image: url("../img/map.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
   height: 416px;
+  margin-bottom: 75px;
+}
+
+.footer-map .container {
   position: relative;
 }
 
-/* TODO: как правильно было сделать контакты? */
 .footer-map .map-contacts {
   background-color: #ffffff;
   float: left;
-  margin-left: 160px;
   margin-top: 90px;
-  height: 240px;
-  width: 250px;
-
-  /* TODO: Как правильно выровнять кнопку? */
-  position: relative;
+  height: 190px;
+  padding: 23px 20px;
+  width: 210px;
 }
 
 .map-contacts .contacts-title {
+  display: block;
   color: #000000;
   font-size: 16px;
   font-weight: 500;
   line-height: 30px;
-  margin-bottom: 11px;
-  margin-top: 26px;
-  padding-left: 20px;
+  margin: 0;
+  margin-bottom: 12px;
   text-transform: uppercase;
 }
 
@@ -1037,33 +1034,23 @@ input[type="checkbox"]:checked:disabled + label::before {
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
-  padding-left: 20px;
-}
-
-.map-contacts .contacts-phone {
-  display: block;
-  margin-bottom: 25px;
-  margin-top: 20px;
+  margin: 0;
+  margin-bottom: 20px;
 }
 
 .map-contacts .btn {
-  padding-left: 54px;
-  padding-right: 54px;
-
-  /* TODO: Как правильно выровнять кнопку? */
-  position: absolute;
-  bottom: 26px;
-  left: 50%;
-  margin-left: -102px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 204px;
 }
 
 .footer-map .map-pointer {
+  bottom: 19px;
   float: right;
-  width: 231px;
-
   position: absolute;
-  bottom: 110px;
-  left: 840px;
+  right: -21px;
+  width: 231px;
 }
 
 .footer-social {
@@ -1089,7 +1076,6 @@ input[type="checkbox"]:checked:disabled + label::before {
   margin-right: 0;
 }
 
-/* TODO: Как правильно центрировать иконки? Сейчас рассчитал */
 .social-vk {
   background-position: -2px -607px;
 }
@@ -1113,6 +1099,7 @@ input[type="checkbox"]:checked:disabled + label::before {
 
 .footer-sale {
   float: right;
+  margin-right: 10px;
   width: 550px;
 }
 
@@ -1124,72 +1111,3 @@ input[type="checkbox"]:checked:disabled + label::before {
 .footer-sale p {
   margin: 0;
 }
-
-/*
-.sprite-cart {
-    width: 15px;
-    height: 15px;
-    background-position: -20px -20px;
-}
-
-.sprite-cart-hover {
-    width: 15px;
-    height: 15px;
-    background-position: -20px -75px;
-}
-
-.sprite-check-off {
-    width: 23px;
-    height: 23px;
-    background-position: -20px -130px;
-}
-
-.sprite-check-off-disabled {
-    width: 23px;
-    height: 23px;
-    background-position: -20px -193px;
-}
-
-.sprite-check-off-hover {
-    width: 23px;
-    height: 23px;
-    background-position: -20px -256px;
-}
-
-.sprite-check-on {
-    width: 27px;
-    height: 23px;
-    background-position: -20px -319px;
-}
-
-.sprite-check-on-disabled {
-    width: 27px;
-    height: 23px;
-    background-position: -20px -382px;
-}
-
-.sprite-check-on-hover {
-    width: 27px;
-    height: 23px;
-    background-position: -20px -445px;
-}
-
-.sprite-fb {
-    width: 12px;
-    height: 22px;
-    background-position: -20px -508px;
-}
-
-.sprite-ig {
-    width: 21px;
-    height: 21px;
-    background-position: -20px -570px;
-}
-
-.sprite-vk {
-    width: 26px;
-    height: 15px;
-    background-position: -20px -631px;
-}
-
-*/
