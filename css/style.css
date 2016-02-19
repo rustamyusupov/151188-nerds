@@ -990,7 +990,7 @@ input[type="checkbox"]:checked:disabled + label::before {
   position: relative;
 }
 
-  /* TODO: В первом приближении, потом заменю на интерактивную */
+/* TODO: В первом приближении, потом заменю на интерактивную */
 .footer-map {
   background-color: #e9e5dc;
   background-image: url("../img/map.jpg");
@@ -1003,6 +1003,10 @@ input[type="checkbox"]:checked:disabled + label::before {
 .footer-map .container {
   position: relative;
 }
+
+/*.footer-map iframe {
+  position: absolute;
+}*/
 
 .footer-map .map-contacts {
   background-color: #ffffff;
