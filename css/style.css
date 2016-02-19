@@ -158,7 +158,7 @@ h3 {
 .btn {
   background-color: #fb565a;
   border: none;
-  border-radius: 3%;
+  border-radius: 2px;
   color: #ffffff;
   cursor: pointer;
   display: inline-block;
@@ -988,6 +988,7 @@ input[type="checkbox"]:checked:disabled + label::before {
 .main-footer {
   margin-top: 78px;
   margin-bottom: 75px;
+  position: relative;
 }
 
   /* TODO: В первом приближении, потом заменю на интерактивную */
@@ -1110,19 +1111,18 @@ input[type="checkbox"]:checked:disabled + label::before {
 /* Modal Write Us */
 .modal-writeus {
   background-color: #ffffff;
-  /* TODO: От чего считаем? */
-  bottom: 10px;
-  /* TODO: Верна ли тень? */
+  bottom: 177px;
+  /* TODO: По-моему с тенью ошибка? */
   box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.75);
+  display: none;
   height: 311px;
   left: 50%;
-  margin-left: -315px;
+  margin-left: -325px;
   padding-bottom: 50px;
   padding-left: 80px;
   padding-right: 90px;
   padding-top: 55px;
   position: absolute;
-
   width: 460px;
 }
 
@@ -1133,15 +1133,19 @@ input[type="checkbox"]:checked:disabled + label::before {
   cursor: pointer;
   font-size: 0;
   height: 41px;
-
   outline: 0;
   position: absolute;
   right: 6px;
   top: 6px;
-
-
   width: 41px;
+}
 
+.modal-writeus-close:hover {
+  background-color: #d6494d;
+}
+
+.modal-writeus-close:active {
+  background-color: #b63538;
 }
 
 .modal-writeus-close::before,
@@ -1151,24 +1155,24 @@ input[type="checkbox"]:checked:disabled + label::before {
   height: 5px;
   position: absolute;
   right: 7px;
-  top: 17px;
-
-  width: 27px;
-
-
-  /*border-radius: 1px;*/
+  top: 18px;
+  width: 26px;
 }
 
 .modal-writeus-close::before {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
 .modal-writeus-close::after {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
 .writeus-introduce {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   width: 460px;
 }
 
@@ -1182,31 +1186,70 @@ input[type="checkbox"]:checked:disabled + label::before {
   width: 220px;
 }
 
-.writeus-form .text {
-  margin-bottom: 48px;
+.writeus-form textarea {
+  height: 100px;
+  margin-bottom: 41px;
+  padding-top: 9px;
+	resize: none;
+  width: 440px;
 }
 
 .writeus-form label {
   display: block;
   font-size: 16px;
   line-height: 18px;
-  margin-bottom: 10px;
+  margin-bottom: 9px;
 }
 
 .writeus-form .btn {
-  width: 460px;
+  width: 100%;
 }
 
 .writeus-form input[type="text"],
-.writeus-form .text {
+.writeus-form textarea {
   border: 2px solid #d7dcde;
-  border-radius: 2%;
+  border-radius: 2px;
   font-size: 12px;
   line-height: 18px;
+  padding-left: 14px;
   text-transform: uppercase;
 }
 
+.writeus-form input[type="text"]:hover,
+.writeus-form textarea:hover {
+  border-color: #a2a9ac;
+}
+
+.writeus-form input[type="text"]:focus,
+.writeus-form textarea:focus {
+  border-color: #56bffb;
+}
+
 .writeus-form input[type="text"] {
-  height: 34px;
-  width: 216px;
+  height: 32px;
+  width: 202px;
+}
+
+.writeus-form input::-webkit-input-placeholder,
+.writeus-form textarea::-webkit-input-placeholder {
+  color: #000000;
+}
+
+.writeus-form input:-moz-placeholder,
+.writeus-form textarea::-moz-placeholder {
+  color: #000000;
+}
+
+.writeus-form input::-webkit-input-placeholder,
+.writeus-form textarea::-webkit-input-placeholder {
+  color: #000000;
+}
+
+.writeus-form input:-ms-input-placeholder,
+.writeus-form textarea::-ms-input-placeholder {
+  color: #000000;
+}
+.writeus-form input::-ms-input-placeholder,
+.writeus-form textarea::-ms-input-placeholder {
+  color: #000000;
 }

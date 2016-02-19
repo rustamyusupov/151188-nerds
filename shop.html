@@ -33,7 +33,6 @@
               </li>
             </ul>
           </nav>
-          <!-- TODO: Как будет выглядеть разметка, если этот раздел будет текущим? Как его стилизовать? -->
           <div class="user-block">
             <a class="cart" href="#">Корзина</a>
           </div>
@@ -228,7 +227,6 @@
     </main>
     <footer class="main-footer">
       <div class="footer-map clearfix">
-        <!-- TODO: Правильно ли использую контейнер с распоркой для карты? -->
         <div class="container clearfix">
           <div class="map-contacts">
             <p class="contacts-title">N&euml;rds design studio</p>
@@ -252,6 +250,24 @@
           <h2>Давайте дружить, это выгодно!</h2>
           <p>Скидка 10% для друзей из социальных сетей.</p>
         </div>
+      </div>
+      <div class="modal-writeus">
+        <button class="modal-writeus-close" type="button" title="Закрыть"></button>
+        <form class="writeus-form" action="#" method="post">
+          <div class="writeus-introduce clearfix">
+            <div class="introduce-name">
+              <label for="user-field">Ваше имя:</label>
+              <input class="user" type="text" name="user" id="user-field" placeholder="Представьтесь, пожалуйста">
+            </div>
+            <div class="introduce-email">
+              <label for="email-field">Ваш e-mail:</label>
+              <input class="email" type="text" name="email" id="email-field" placeholder="Для отправки ответа">
+            </div>
+          </div>
+          <label for="text-field">Текст письма:</label>
+          <textarea name="text" id="text-field" placeholder="В свободной форме"></textarea>
+          <button class="btn" type="submit">Отправить</button>
+        </form>
       </div>
     </footer>
     <!-- TODO: Подключить минимизированный JS файл -->
