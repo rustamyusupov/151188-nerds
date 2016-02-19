@@ -462,7 +462,6 @@ h3 {
   vertical-align: middle;
 }
 
-/* TODO: Понимаю, как это работает, но не до конца понимаю зачем это нужно? */
 .main-gallery-item img {
   display: block;
 }
@@ -1109,10 +1108,24 @@ input[type="checkbox"]:checked:disabled + label::before {
 }
 
 /* Modal Write Us */
+@keyframes bounce {
+  0%   {
+    transform: translateX(-2000px);
+  }
+  70%  {
+    transform: translateX(-30px);
+  }
+  90%  {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .modal-writeus {
   background-color: #ffffff;
   bottom: 177px;
-  /* TODO: По-моему с тенью ошибка? */
   box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.75);
   display: none;
   height: 311px;
@@ -1128,6 +1141,7 @@ input[type="checkbox"]:checked:disabled + label::before {
 
 .modal-writeus-show {
   display: block;
+  animation: bounce 0.6s;
 }
 
 .modal-writeus-close {

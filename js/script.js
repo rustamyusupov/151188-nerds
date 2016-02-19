@@ -7,16 +7,13 @@ var textField = document.querySelector("[name=text]");
 var user = localStorage.getItem("user");
 var email = localStorage.getItem("email");
 
-// localStorage.clear();
-
-window.addEventListener("keydown", closeWriteusFormByEsc);
-writeusForm.addEventListener("submit", submitWriteusForm);
 writeusBtn.addEventListener("click", showWriteusForm);
-closeBtn.addEventListener("click", closeWriteusForm);
+writeusForm.addEventListener("submit", submitWriteusForm);
+closeBtn.addEventListener("click", showHideWriteusForm);
+window.addEventListener("keydown", closeWriteusFormByEsc);
 
-function submitWriteusForm() {
-  localStorage.setItem("user", userField.value);
-  localStorage.setItem("email", emailField.value);
+function showHideWriteusForm() {
+  writeusForm.classList.toggle("modal-writeus-show");
 }
 
 function showWriteusForm() {
@@ -28,7 +25,7 @@ function showWriteusForm() {
     emailField.value = email;
   }
 
-  writeusForm.classList.add("modal-writeus-show");
+  showHideWriteusForm();
 
   if (user && email) {
     textField.focus();
@@ -39,17 +36,13 @@ function showWriteusForm() {
   }
 }
 
-// TODO: Можно сделать один обработчик на открытие и закрытие формы
-function closeWriteusForm() {
-  writeusForm.classList.remove("modal-writeus-show");
+function submitWriteusForm() {
+  localStorage.setItem("user", userField.value);
+  localStorage.setItem("email", emailField.value);
 }
 
 function closeWriteusFormByEsc(event) {
-  if (event.keyCode === 27) {
-    if (writeusForm.classList.contains("modal-writeus-show")) {
-      closeWriteusForm();
-    }
-  }
-}
+  if (event.keyCode !== 27) return;
 
-// TODO: 22 шаг
+  showHideWriteusForm();
+}
