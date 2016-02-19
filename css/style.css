@@ -1126,6 +1126,10 @@ input[type="checkbox"]:checked:disabled + label::before {
   width: 460px;
 }
 
+.modal-writeus-show {
+  display: block;
+}
+
 .modal-writeus-close {
   background-color: #fb565a;
   border: 0;

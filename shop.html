@@ -257,19 +257,19 @@
           <div class="writeus-introduce clearfix">
             <div class="introduce-name">
               <label for="user-field">Ваше имя:</label>
-              <input class="user" type="text" name="user" id="user-field" placeholder="Представьтесь, пожалуйста">
+              <input type="text" name="user" id="user-field" placeholder="Представьтесь, пожалуйста" required>
             </div>
             <div class="introduce-email">
               <label for="email-field">Ваш e-mail:</label>
-              <input class="email" type="text" name="email" id="email-field" placeholder="Для отправки ответа">
+              <input type="text" name="email" id="email-field" placeholder="Для отправки ответа" required>
             </div>
           </div>
           <label for="text-field">Текст письма:</label>
-          <textarea name="text" id="text-field" placeholder="В свободной форме"></textarea>
+          <textarea name="text" id="text-field" placeholder="В свободной форме" required></textarea>
           <button class="btn" type="submit">Отправить</button>
         </form>
       </div>
     </footer>
-    <!-- TODO: Подключить минимизированный JS файл -->
+    <script src="js/script.js"></script>
   </body>
 </html>
