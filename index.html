@@ -163,6 +163,24 @@
         </div>
       </div>
     </footer>
+    <div class="modal-writeus">
+      <button class="modal-writeus-close" type="button" title="Закрыть"></button>
+      <form class="writeus-form" action="#" method="post">
+        <div class="writeus-introduce clearfix">
+          <div class="introduce-name">
+            <label for="user-field">Ваше имя:</label>
+            <input class="user" type="text" name="user" id="user-field" placeholder="Представьтесь, пожалуйста">
+          </div>
+          <div class="introduce-email">
+            <label for="email-field">Ваш e-mail:</label>
+            <input class="email" type="text" name="email" id="email-field" placeholder="Для отправки ответа">
+          </div>
+        </div>
+        <label for="text-field">Текст письма:</label>
+        <textarea class="text" name="text" id="text-field" rows="4" cols="60">В свободной форме</textarea>
+        <button class="btn" type="submit">Отправить</button>
+      </form>
+    </div>
     <!-- TODO: Подключить минимизированный JS файл -->
   </body>
 </html>

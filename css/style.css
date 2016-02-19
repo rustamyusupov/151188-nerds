@@ -1,8 +1,3 @@
-/* TODO:
-  1. Почему при Pixel Perfect у меня шрифты отличаются по ширине?
-  2. Хватит ли такой подводки по Pixel Perfect? Главная норм, а Магазин?
-*/
-
 body {
   color: #000000;
   font-family: "Roboto", "Tahoma", sans-serif;
@@ -1110,4 +1105,108 @@ input[type="checkbox"]:checked:disabled + label::before {
 
 .footer-sale p {
   margin: 0;
+}
+
+/* Modal Write Us */
+.modal-writeus {
+  background-color: #ffffff;
+  /* TODO: От чего считаем? */
+  bottom: 10px;
+  /* TODO: Верна ли тень? */
+  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.75);
+  height: 311px;
+  left: 50%;
+  margin-left: -315px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+  padding-right: 90px;
+  padding-top: 55px;
+  position: absolute;
+
+  width: 460px;
+}
+
+.modal-writeus-close {
+  background-color: #fb565a;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0;
+  height: 41px;
+
+  outline: 0;
+  position: absolute;
+  right: 6px;
+  top: 6px;
+
+
+  width: 41px;
+
+}
+
+.modal-writeus-close::before,
+.modal-writeus-close::after {
+  background-color: #ffffff;
+  content: "";
+  height: 5px;
+  position: absolute;
+  right: 7px;
+  top: 17px;
+
+  width: 27px;
+
+
+  /*border-radius: 1px;*/
+}
+
+.modal-writeus-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-writeus-close::after {
+  transform: rotate(-45deg);
+}
+
+.writeus-introduce {
+  margin-bottom: 25px;
+  width: 460px;
+}
+
+.introduce-name {
+  float: left;
+  width: 220px;
+}
+
+.introduce-email {
+  float: right;
+  width: 220px;
+}
+
+.writeus-form .text {
+  margin-bottom: 48px;
+}
+
+.writeus-form label {
+  display: block;
+  font-size: 16px;
+  line-height: 18px;
+  margin-bottom: 10px;
+}
+
+.writeus-form .btn {
+  width: 460px;
+}
+
+.writeus-form input[type="text"],
+.writeus-form .text {
+  border: 2px solid #d7dcde;
+  border-radius: 2%;
+  font-size: 12px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.writeus-form input[type="text"] {
+  height: 34px;
+  width: 216px;
 }
