@@ -990,7 +990,6 @@ input[type="checkbox"]:checked:disabled + label::before {
   position: relative;
 }
 
-/* TODO: В первом приближении, потом заменю на интерактивную */
 .footer-map {
   background-color: #e9e5dc;
   background-image: url("../img/map.jpg");
@@ -1004,17 +1003,20 @@ input[type="checkbox"]:checked:disabled + label::before {
   position: relative;
 }
 
-/*.footer-map iframe {
+.footer-map iframe {
   position: absolute;
-}*/
+}
 
 .footer-map .map-contacts {
   background-color: #ffffff;
-  float: left;
-  margin-top: 90px;
+  /*float: left;
+  margin-top: 90px;*/
   height: 190px;
   padding: 23px 20px;
   width: 210px;
+
+  position: absolute;
+  top: 90px;
 }
 
 .map-contacts .contacts-title {

@@ -5,7 +5,9 @@
     <title>Нёрдс</title>
     <link href="css/normalize.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=latin,cyrillic' rel='stylesheet'>
-    <link href="css/style.min.css" rel="stylesheet">
+    <!-- TODO: 1. Минимизировать перед отправкой -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- <link href="css/style.min.css" rel="stylesheet"> -->
   </head>
   <body>
     <header class="main-header clearfix">
@@ -136,9 +138,18 @@
     </main>
     <footer class="main-footer">
       <div class="footer-map">
-        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5770788822474!2d30.320325987785825!3d59.93915963501814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+191186!5e0!3m2!1sen!2sru!4v1455899785662" width="1500" height="416" frameborder="0" style="border:0" allowfullscreen>
-        </iframe> -->
-        <div class="container clearfix">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5770788822474!2d30.320325987785825!3d59.93915963501814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+191186!5e0!3m2!1sen!2sru!4v1455899785662" width="100%" height="416" frameborder="0" style="border:0" allowfullscreen>
+        </iframe>
+        <div class="container">
+          <div class="map-contacts">
+            <p class="contacts-title">N&euml;rds design studio</p>
+            <p>191186, Санкт-Петербург,<br>
+               ул. Б. Конюшенная, д. 19/8</p>
+               <p>тел. +7 (812) 275-75-75</p>
+               <button class="btn">Напишите нам</button>
+          </div>
+        </div>
+        <!-- <div class="container clearfix">
           <div class="map-contacts">
             <p class="contacts-title">N&euml;rds design studio</p>
             <p>191186, Санкт-Петербург,<br>
@@ -149,7 +160,7 @@
           <div class="map-pointer">
             <img src="img/map-pointer.png" width="231" height="190" alt="Указатель студии на карте">
           </div>
-        </div>
+        </div> -->
       </div>
       <div class="container clearfix">
         <div class="footer-social">
