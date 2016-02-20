@@ -5,9 +5,7 @@
     <title>Нёрдс: магазин</title>
     <link href="css/normalize.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=latin,cyrillic' rel='stylesheet'>
-    <!-- TODO: 1. Минимизировать перед отправкой -->
-    <link href="css/style.css" rel="stylesheet">
-    <!-- <link href="css/style.min.css" rel="stylesheet"> -->
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header clearfix">
@@ -129,8 +127,10 @@
               <div class="goods-item-content">
                 <img src="img/shop-aviator.jpg" width="240" height="240" alt="Миниатюра Aviator">
                 <div class="content-description">
-                  <a class="name" href="#">Aviator</a>
-                  <p>Одностраничный макет с авторским дизайном</p>
+                  <div class="text">
+                    <a class="name" href="#">Aviator</a>
+                    <p>Одностраничный макет с авторским дизайном</p>
+                  </div>
                   <a class="btn" href="#">8000 р.</a>
                 </div>
               </div>
@@ -144,8 +144,10 @@
               <div class="goods-item-content">
                 <img src="img/shop-sunset.jpg" width="240" height="240" alt="Миниатюра Sunset">
                 <div class="content-description">
-                  <a class="name" href="#">Sunset</a>
-                  <p>Интернет-магазин с&nbsp;личным кабинетом</p>
+                  <div class="text">
+                    <a class="name" href="#">Sunset</a>
+                    <p>Интернет-магазин с&nbsp;личным кабинетом</p>
+                  </div>
                   <a class="btn" href="#">10000 р.</a>
                 </div>
               </div>
@@ -159,8 +161,10 @@
               <div class="goods-item-content">
                 <img src="img/shop-forte.jpg" width="240" height="240" alt="Миниатюра Forte">
                 <div class="content-description">
-                  <a class="name" href="#">Forte</a>
-                  <p>Отличный макет для&nbsp;личного блога</p>
+                  <div class="text">
+                    <a class="name" href="#">Forte</a>
+                    <p>Отличный макет для&nbsp;личного блога</p>
+                  </div>
                   <a class="btn" href="#">5000 р.</a>
                 </div>
               </div>
@@ -174,8 +178,10 @@
               <div class="goods-item-content">
                 <img src="img/shop-marquee.jpg" width="240" height="240" alt="Миниатюра Marquee">
                 <div class="content-description">
-                  <a class="name" href="#">Modern Organic Thai</a>
-                  <p>Сайт для ресторана быстрого питания</p>
+                  <div class="text">
+                    <a class="name" href="#">Modern Organic Thai</a>
+                    <p>Сайт для ресторана быстрого питания</p>
+                  </div>
                   <a class="btn" href="#">12000 р.</a>
                 </div>
               </div>
@@ -236,7 +242,7 @@
             <p>191186, Санкт-Петербург,<br>
                ул. Б. Конюшенная, д. 19/8</p>
                <p>тел. +7 (812) 275-75-75</p>
-               <button class="btn">Напишите нам</button>
+               <a class="btn" href="#">Напишите нам</a>
           </div>
         </div>
       </div>

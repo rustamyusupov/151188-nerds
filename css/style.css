@@ -372,7 +372,7 @@ h3 {
 .main-description-left {
   float: left;
   margin-right: 20px;
-  width: 620px;
+  width: 600px;
 }
 
 .main-description-right {
@@ -444,7 +444,7 @@ h3 {
 .main-gallery {
   font-size: 0;
   padding-top: 40px;
-  padding-bottom: 5px;
+  padding-bottom: 15px;
 }
 
 .main-gallery-item {
@@ -480,7 +480,7 @@ h3 {
 }
 
 .goods {
-  margin-bottom: 75px;
+  margin-bottom: 65px;
 }
 
 .goods-filters {
@@ -878,7 +878,7 @@ input[type="checkbox"]:checked:disabled + label::before {
 .content-description {
   background-color: #ffffff;
   display: block;
-  height: 140px;
+  min-height: 139px;
   left: 20px;
   padding: 33px 20px;
   padding-bottom: 28px;
@@ -886,8 +886,6 @@ input[type="checkbox"]:checked:disabled + label::before {
   text-align: center;
   top: 20px;
   width: 160px;
-
-  outline: 1px dashed red;
 }
 
 .content-description .name {
@@ -907,14 +905,15 @@ input[type="checkbox"]:checked:disabled + label::before {
   padding: 0;
 }
 
+.content-description .text {
+  min-height: 90px;
+}
+
 .content-description .btn {
-  bottom: 30px;
   font-size: 18px;
-  left: 50%;
   line-height: 24px;
-  margin-left: -70px;
+  margin-top: 10px;
   padding: 7px 0;
-  position: absolute;
   width: 140px;
 }
 
@@ -942,6 +941,7 @@ input[type="checkbox"]:checked:disabled + label::before {
   height: 29px;
   line-height: 18px;
   margin-right: 10px;
+  margin-bottom: 10px;
   padding-top: 9px;
   text-align: center;
   vertical-align: top;
@@ -982,7 +982,7 @@ input[type="checkbox"]:checked:disabled + label::before {
 
 /* Footer */
 .main-footer {
-  margin-top: 78px;
+  margin-top: 68px;
   margin-bottom: 75px;
   position: relative;
 }
@@ -1038,6 +1038,7 @@ input[type="checkbox"]:checked:disabled + label::before {
   display: block;
   margin: 0 auto;
   margin-top: 29px;
+  padding: 10px 0;
   width: 204px;
 }
 
@@ -1131,7 +1132,7 @@ input[type="checkbox"]:checked:disabled + label::before {
 
 .modal-writeus {
   background-color: #ffffff;
-  bottom: 177px;
+  bottom: 198px;
   box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.75);
   display: none;
   height: 311px;
@@ -1251,7 +1252,7 @@ input[type="checkbox"]:checked:disabled + label::before {
 
 .writeus-form input[type="text"] {
   height: 32px;
-  width: 202px;
+  width: 201px;
 }
 
 .writeus-form input::-webkit-input-placeholder,

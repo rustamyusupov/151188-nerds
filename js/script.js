@@ -21,11 +21,13 @@ function checkLocalStorage() {
   return false;
 }
 
-function showHideWriteusForm() {
+function showHideWriteusForm(event) {
+  event.preventDefault();
+
   writeusForm.classList.toggle("modal-writeus-show");
 }
 
-function showWriteusForm() {
+function showWriteusForm(event) {
   if (user) {
     userField.value = user;
   }
@@ -34,7 +36,7 @@ function showWriteusForm() {
     emailField.value = email;
   }
 
-  showHideWriteusForm();
+  showHideWriteusForm(event);
 
   if (user && email) {
     textField.focus();
@@ -45,7 +47,9 @@ function showWriteusForm() {
   }
 }
 
-function submitWriteusForm() {
+function submitWriteusForm(event) {
+  event.preventDefault();
+
   if ( checkLocalStorage() ) {
     localStorage.setItem("user", userField.value);
     localStorage.setItem("email", emailField.value);
