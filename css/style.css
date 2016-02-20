@@ -283,10 +283,6 @@ h3 {
   background-color: #c1c1c1;
 }
 
-.main-features {
-  margin-bottom: 80px;
-}
-
 .main-features::after,
 .main-description::after,
 .main-gallery::after {
@@ -294,16 +290,16 @@ h3 {
   display: block;
   content: "";
   position: relative;
-  top: 80px;
 }
 
 .main-features-item {
   float: left;
   margin-right: 80px;
+  margin-bottom: 80px;
   width: 240px;
 }
 
-.main-features-item:last-child {
+.main-features-item:nth-child(3n) {
   margin-right: 0;
 }
 
@@ -395,7 +391,7 @@ h3 {
   text-transform: uppercase;
 }
 
-.main-description-right .description-foundation p {
+.description-foundation p {
   background-color: #ffffff;
   display: inline;
   margin: 0;
@@ -447,16 +443,14 @@ h3 {
 
 .main-gallery {
   font-size: 0;
-  padding: 40px 0;
-}
-
-.main-gallery::after {
-  top: 35px;
+  padding-top: 40px;
+  padding-bottom: 5px;
 }
 
 .main-gallery-item {
   display: inline-block;
   margin-right: 110px;
+  margin-bottom: 35px;
   opacity: 0.2;
   padding-left: 12px;
   vertical-align: middle;
@@ -466,7 +460,7 @@ h3 {
   display: block;
 }
 
-.main-gallery-item:last-child {
+.main-gallery-item:nth-child(3n) {
   margin-right: 0;
 }
 
@@ -559,6 +553,7 @@ h3 {
   display: inline-block;
   font-size: 16px;
   text-transform: uppercase;
+  vertical-align: top;
   width: 50%;
 }
 
@@ -891,6 +886,8 @@ input[type="checkbox"]:checked:disabled + label::before {
   text-align: center;
   top: 20px;
   width: 160px;
+
+  outline: 1px dashed red;
 }
 
 .content-description .name {
@@ -1009,12 +1006,10 @@ input[type="checkbox"]:checked:disabled + label::before {
 
 .footer-map .map-contacts {
   background-color: #ffffff;
-  /*float: left;
-  margin-top: 90px;*/
-  height: 190px;
-  padding: 23px 20px;
-  width: 210px;
-
+  padding-left: 21px;
+  padding-right: 25px;
+  padding-top: 24px;
+  padding-bottom: 27px;
   position: absolute;
   top: 90px;
 }
@@ -1042,7 +1037,7 @@ input[type="checkbox"]:checked:disabled + label::before {
 .map-contacts .btn {
   display: block;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 29px;
   width: 204px;
 }
 
@@ -1068,12 +1063,13 @@ input[type="checkbox"]:checked:disabled + label::before {
   display: inline-block;
   height: 62px;
   margin-right: 27px;
+  margin-bottom: 27px;
   text-decoration: none;
   vertical-align: top;
   width: 62px;
 }
 
-.social-btn:last-child {
+.social-btn:nth-child(3n) {
   margin-right: 0;
 }
 
