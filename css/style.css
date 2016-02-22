@@ -90,9 +90,10 @@ h3 {
   position: relative;
 }
 
-.main-navigation-current::after {
+.main-navigation-current::after,
+.user-block-current::after {
   background-color: #fb565a;
-  bottom: 12px;
+  bottom: 10px;
   content: "";
   height: 2px;
   left: 20px;
@@ -109,6 +110,19 @@ h3 {
   float: right;
   margin-top: 17px;
   width: 100px;
+}
+
+.user-block-current {
+  position: relative;
+}
+
+.user-block-current a {
+  cursor: default;
+}
+
+.user-block-current::after {
+  left: 5px;
+  right: -1px;
 }
 
 .cart {
@@ -153,6 +167,15 @@ h3 {
 .cart:active::before {
   background-position: -20px -20px;
   opacity: 0.5;
+}
+
+.user-block-current a:hover,
+.user-block-current .cart:hover::before,
+.user-block-current .cart:active::before{
+  color: #000000;
+  cursor: default;
+  background-position: -20px -20px;
+  opacity: 1;
 }
 
 .btn {
@@ -1131,6 +1154,18 @@ input[type="checkbox"]:checked:disabled + label::before {
   }
 }
 
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+
 .modal-writeus {
   background-color: #ffffff;
   bottom: 198px;
@@ -1150,6 +1185,10 @@ input[type="checkbox"]:checked:disabled + label::before {
 .modal-writeus-show {
   display: block;
   animation: bounce 0.6s;
+}
+
+.modal-writeus-error {
+  animation: shake 0.6s;
 }
 
 .modal-writeus-close {

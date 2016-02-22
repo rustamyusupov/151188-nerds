@@ -25,6 +25,7 @@ function showHideWriteusForm(event) {
   event.preventDefault();
 
   writeusForm.classList.toggle("modal-writeus-show");
+  writeusForm.classList.remove("modal-writeus-error");
 }
 
 function showWriteusForm(event) {
@@ -48,7 +49,13 @@ function showWriteusForm(event) {
 }
 
 function submitWriteusForm(event) {
-  event.preventDefault();
+  if (!userField.value || !emailField.value || !textField.value) {
+    event.preventDefault();
+
+    writeusForm.classList.remove("modal-writeus-error");
+    writeusForm.offsetWidth = writeusForm.offsetWidth;
+    writeusForm.classList.add("modal-writeus-error");
+  }
 
   if ( checkLocalStorage() ) {
     localStorage.setItem("user", userField.value);
